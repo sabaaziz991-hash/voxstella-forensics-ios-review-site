@@ -1,0 +1,147 @@
+:root {
+  color-scheme: light;
+  --ink: #172126;
+  --muted: #536168;
+  --line: #d8e2e4;
+  --panel: #ffffff;
+  --wash: #eef5f6;
+  --accent: #0d7775;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--wash);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  width: min(1040px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.page.narrow {
+  width: min(760px, calc(100% - 40px));
+}
+
+.hero {
+  padding: 52px 0 40px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(40px, 8vw, 76px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+.lede {
+  max-width: 760px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.actions a,
+.back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 32px;
+}
+
+article,
+.notice {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 18px;
+}
+
+article p,
+.notice p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.notice {
+  margin-top: 12px;
+}
+
+.back {
+  margin-bottom: 32px;
+}
+
+@media (max-width: 760px) {
+  .page {
+    width: min(100% - 28px, 1040px);
+    padding: 28px 0;
+  }
+
+  .hero {
+    padding-top: 28px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lede {
+    font-size: 19px;
+  }
+}
