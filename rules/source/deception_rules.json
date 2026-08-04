@@ -412,7 +412,7 @@
     "condition": {
       "houses.mute_signs_on_angles": true
     },
-    "rationale": "Refusal to reveal truth; secrecy surrounding the axis.",
+    "rationale": "Mute-sign angular symbolism is retained as descriptive chart context only; it is not evidence of secrecy, refusal, or deception.",
     "evidence": [
       "houses.angles_signs"
     ]
@@ -425,7 +425,7 @@
     "condition": {
       "houses.mute_sign_on_3rd_or_9th": true
     },
-    "rationale": "Deception in communications or legal matters.",
+    "rationale": "Mute-sign symbolism on communication or legal houses is retained as descriptive chart context only; it is not evidence of deception.",
     "evidence": [
       "houses.angles_signs"
     ]
@@ -486,7 +486,7 @@
   },
   {
     "id": "node_with_neptune_or_mercury",
-    "title": "Node with Neptune/Mercury (karmic ruse/lie scheme)",
+    "title": "Node contact with Neptune or Mercury",
     "category": "Context",
     "weight": 2,
     "condition": {
@@ -601,7 +601,7 @@
         }
       ]
     },
-    "rationale": "Node + Neptune/Mercury signals planned deception, ruse, or lie schemes.",
+    "rationale": "Node contact with Neptune or Mercury is retained as descriptive chart context only; it is not evidence of a ruse, lie, or cover-up.",
     "evidence": [
       "aspects"
     ]

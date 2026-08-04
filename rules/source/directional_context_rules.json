@@ -2859,21 +2859,46 @@
           "houses.seventh_ruler_in_8_or_12": true
         },
         {
-          "any": [
+          "all": [
             {
-              "houses.sixth_ruler_house": 9
-            },
-            {
-              "houses.ninth_ruler_house": 9
-            },
-            {
-              "houses.third_ruler_house": [
-                3,
-                9
+              "any": [
+                {
+                  "houses.sixth_ruler_house": 9
+                },
+                {
+                  "houses.ninth_ruler_house": 6
+                }
               ]
             },
             {
-              "planets.Mars.house": 10
+              "houses.malefics_angular_count>=": 1
+            },
+            {
+              "any": [
+                {
+                  "all": [
+                    {
+                      "houses.first_ruler_hard_afflicted": true
+                    },
+                    {
+                      "moon.hard_malefic_contact": true
+                    }
+                  ]
+                },
+                {
+                  "all": [
+                    {
+                      "houses.counts.10>=": 2
+                    },
+                    {
+                      "houses.tenth_ruler_house": 10
+                    },
+                    {
+                      "houses.malefics_angular_count>=": 2
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -2942,7 +2967,7 @@
         }
       ]
     },
-    "rationale": "In route or transport-harm charts, the Moon can describe the victim and movement, while the Moon's dispositor shows how that testimony is handled. A tight hard contact from the Moon's dispositor to the 7th ruler, with the 7th ruler in death or hidden houses and separate route/vehicle pressure, supports a known-person or close-associate bridge without by itself claiming a spouse or family motive.",
+    "rationale": "After an independently complete transport-harm structure is present, a tight hard contact from the Moon's dispositor to the 7th ruler, with the 7th ruler in a death or hidden house and a separate Mercury/Mars/Saturn pressure channel, supports a known-person or close-associate bridge without claiming a spouse or family motive.",
     "evidence": [
       "moon",
       "houses.seventh_ruler",
@@ -3192,8 +3217,8 @@
   },
   {
     "id": "public_or_authority_axis_foregrounded",
-    "title": "Public or authority axis is foregrounded",
-    "category": "Public",
+    "title": "Tenth-house pressure context is foregrounded",
+    "category": "Context",
     "weight": 2,
     "condition": {
       "all": [
@@ -3228,7 +3253,7 @@
         }
       ]
     },
-    "rationale": "A strong 10th-house or solar signature tied to violence/hidden-house pressure points to an authority, public, or celebrity-linked case.",
+    "rationale": "A strong 10th-house signature tied to hidden-house or malefic pressure is retained as chart context. It does not establish that the event involved an authority, public figure, celebrity, or crowd.",
     "evidence": [
       "houses.tenth_ruler",
       "houses.tenth_ruler_house",
@@ -3241,8 +3266,8 @@
   },
   {
     "id": "public_figure_or_leader_axis",
-    "title": "Solar authority axis marks a public figure or leader case",
-    "category": "Public",
+    "title": "Angular Sun and tenth-house pressure context",
+    "category": "Context",
     "weight": 2,
     "condition": {
       "all": [
@@ -3271,7 +3296,7 @@
         }
       ]
     },
-    "rationale": "Salerno repeatedly treats the solar and 10th-house axis as the signature of public figures, authorities, or world leaders. Require an angular Sun, a live 10th-house linkage, and separate violence pressure before reading a case as publicly exposed.",
+    "rationale": "An angular Sun with a tenth-house linkage and separate pressure is retained as chart context. These features alone do not establish that the event involved a public figure, authority, leader, celebrity, or crowd.",
     "evidence": [
       "planets.Sun",
       "houses.tenth_ruler",
@@ -3869,118 +3894,48 @@
     "condition": {
       "all": [
         {
-          "houses.sixth_ruler_house": 9
-        },
-        {
-          "houses.ninth_ruler_house": 6
-        },
-        {
           "any": [
             {
-              "houses.first_ruler_house": [
-                3,
-                6,
-                9
-              ]
+              "houses.sixth_ruler_house": 9
             },
             {
-              "moon.in_3_or_9": true
-            },
-            {
-              "houses.counts.10>=": 2
+              "houses.ninth_ruler_house": 6
             }
           ]
+        },
+        {
+          "houses.malefics_angular_count>=": 1
         },
         {
           "any": [
             {
               "all": [
                 {
-                  "aspects.Mercury_to_Mars.type": [
-                    "conjunction",
-                    "square",
-                    "opposition"
-                  ]
+                  "houses.first_ruler_hard_afflicted": true
                 },
                 {
-                  "aspects.Mercury_to_Mars.orb<=": 6
+                  "moon.hard_malefic_contact": true
                 }
               ]
             },
             {
               "all": [
                 {
-                  "aspects.Mars_to_Mercury.type": [
-                    "conjunction",
-                    "square",
-                    "opposition"
-                  ]
+                  "houses.counts.10>=": 2
                 },
                 {
-                  "aspects.Mars_to_Mercury.orb<=": 6
-                }
-              ]
-            },
-            {
-              "all": [
-                {
-                  "aspects.Mercury_to_Saturn.type": [
-                    "conjunction",
-                    "square",
-                    "opposition"
-                  ]
+                  "houses.tenth_ruler_house": 10
                 },
                 {
-                  "aspects.Mercury_to_Saturn.orb<=": 6
+                  "houses.malefics_angular_count>=": 2
                 }
               ]
-            },
-            {
-              "all": [
-                {
-                  "aspects.Saturn_to_Mercury.type": [
-                    "conjunction",
-                    "square",
-                    "opposition"
-                  ]
-                },
-                {
-                  "aspects.Saturn_to_Mercury.orb<=": 6
-                }
-              ]
-            },
-            {
-              "houses.malefics_in_8th>=": 1
             }
           ]
-        },
-        {
-          "any": [
-            {
-              "houses.malefics_angular_count>=": 1
-            },
-            {
-              "planets.Mars.angular": true
-            },
-            {
-              "planets.Saturn.angular": true
-            },
-            {
-              "houses.first_ruler_in_8_or_12": true
-            },
-            {
-              "houses.seventh_ruler_in_8_or_12": true
-            }
-          ]
-        },
-        {
-          "not": {
-            "houses.first_ruler_rules_8th": true
-          }
         }
       ]
     },
-    "rationale": "A transport-harm classification requires a reciprocal 6th/9th route-body link, a separate hard mechanical or malefic channel, and victim, Moon, or public-event corroboration.",
+    "rationale": "A transport-harm classification requires a 6th/9th route-body link, angular malefic pressure, and either a jointly afflicted victim/Moon channel or a separately saturated 10th-house impact channel.",
     "evidence": [
       "houses.sixth_ruler",
       "houses.sixth_ruler_house",
@@ -4179,7 +4134,7 @@
         }
       ]
     },
-    "rationale": "Travel houses under water or ending pressure remain contextual. They cannot create an accident or disaster axis unless a separate mechanism-specific rule, such as the reciprocal 6th/9th transport pattern, is satisfied.",
+    "rationale": "Travel houses under water or ending pressure remain contextual. They cannot create an accident or disaster axis unless the separate mechanism-specific transport rule satisfies its route, angular-pressure, and affliction-or-impact channels.",
     "evidence": [
       "houses.first_ruler_house",
       "houses.seventh_ruler_house",
