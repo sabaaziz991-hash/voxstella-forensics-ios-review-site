@@ -18,38 +18,15 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Validate and assemble corpus
         shell: bash
         run: |
           set -euo pipefail
-          files=(
-            rules/source/base.json
-            rules/source/deception_rules.json
-            rules/source/degree_signatures.json
-            rules/source/directional_context_rules.json
-            rules/source/house_rules.json
-          )
-          for file in "${files[@]}"; do
-            jq -e 'type == "array" and length > 0' "$file" >/dev/null
-          done
-
           revision="$(date -u +%Y%m%d%H%M%S)"
           package="rules/packages/${revision}.json"
-          jq -S -s 'add' "${files[@]}" > "$package"
-          jq -e '
-            length > 0 and
-            all(.[];
-              (.id | type == "string" and length > 0) and
-              (.title | type == "string" and length > 0) and
-              (.category | type == "string" and length > 0) and
-              (.weight | type == "number") and
-              (.rationale | type == "string" and length > 0) and
-              has("condition")
-            ) and
-            ([.[].id] | length == (unique | length))
-          ' "$package" >/dev/null
+          python3 rules/validate_rules.py "$package"
 
           sha256="$(shasum -a 256 "$package" | awk '{print $1}')"
           published_at="$(date -u +%Y-%m-%dT%H:%M:%SZ)"

@@ -8,3 +8,5 @@ The iOS app accepts only the complete set of rule IDs shipped in the reviewed
 binary. To turn off a rule, keep its ID and set its condition to `false`.
 
 Do not edit `manifest.json` or `packages/` manually.
+
+`shipped_rule_ids.json` defines the rule IDs supported by the reviewed app.
