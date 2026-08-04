@@ -1,0 +1,79 @@
+[
+  {
+    "id": "sect_malefic_out_of_sect",
+    "title": "Malefic contrary to sect (angular)",
+    "category": "Stressors",
+    "weight": 3,
+    "condition": {
+      "any": [
+        {
+          "all": [
+            {
+              "sect.chart_sect": "diurnal"
+            },
+            {
+              "planets.Mars.angular": true
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "sect.chart_sect": "nocturnal"
+            },
+            {
+              "planets.Saturn.angular": true
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Angular malefic contrary to sect increases friction.",
+    "evidence": [
+      "sect.chart_sect",
+      "planets.Mars",
+      "planets.Saturn"
+    ]
+  },
+  {
+    "id": "moon_applying_malefic_hard",
+    "title": "Moon applying to malefic by hard aspect",
+    "category": "Headwinds",
+    "weight": 2,
+    "condition": {
+      "any": [
+        {
+          "all": [
+            {
+              "aspects.Moon_to_Mars.type": [
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Moon_to_Mars.applying": true
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "aspects.Moon_to_Saturn.type": [
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Moon_to_Saturn.applying": true
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Applying hard aspect from the Moon to malefic signals near-term friction.",
+    "evidence": [
+      "aspects.Moon_to_Mars",
+      "aspects.Moon_to_Saturn"
+    ]
+  }
+]

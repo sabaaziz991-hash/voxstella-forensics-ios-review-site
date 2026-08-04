@@ -1,0 +1,4586 @@
+[
+  {
+    "id": "violence_life_death_overlap",
+    "title": "Life/death overlap points to violence or homicide",
+    "category": "Violence",
+    "weight": 4,
+    "condition": {
+      "any": [
+        {
+          "houses.first_ruler_rules_8th": true
+        },
+        {
+          "houses.first_ruler_in_8_or_12": true
+        }
+      ]
+    },
+    "rationale": "When the victim ruler also rules death matters or falls into hidden/death houses, violence or homicide becomes a primary forensic direction.",
+    "evidence": [
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "houses.eighth_ruler"
+    ]
+  },
+  {
+    "id": "violence_moon_under_death_pressure",
+    "title": "Moon under death pressure",
+    "category": "Violence",
+    "weight": 3,
+    "condition": {
+      "any": [
+        {
+          "planets.Moon.house": 8
+        },
+        {
+          "all": [
+            {
+              "moon.in_4_8_12": true
+            },
+            {
+              "moon.hard_malefic_contact": true
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "any": [
+                {
+                  "houses.malefics_angular_count>=": 2
+                },
+                {
+                  "houses.first_ruler_rules_8th": true
+                },
+                {
+                  "houses.first_ruler_in_8_or_12": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Moon pressure in death/end-matter houses or under hard malefic attack often describes violence, homicide, or acute bodily danger.",
+    "evidence": [
+      "moon",
+      "houses.malefics_angular_count"
+    ]
+  },
+  {
+    "id": "violence_hidden_victim_with_angular_malefic",
+    "title": "Hidden victim with angular violence markers",
+    "category": "Violence",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "houses.malefics_angular_count>=": 1
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "moon.in_4_8_12": true
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "A hidden or endangered victim combined with an angular malefic is a grounded violence or homicide signature.",
+    "evidence": [
+      "houses.first_ruler_house",
+      "moon",
+      "houses.malefics_angular_count"
+    ]
+  },
+  {
+    "id": "violence_malefic_in_8th_with_hidden_context",
+    "title": "Malefic in the 8th with hidden or family-linked context",
+    "category": "Violence",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "houses.malefics_in_8th>=": 1
+        },
+        {
+          "any": [
+            {
+              "planets.Sun.house": 12
+            },
+            {
+              "planets.Moon.house": 12
+            },
+            {
+              "houses.first_and_seventh_rulers_same_house": true
+            },
+            {
+              "houses.fourth_ruler_house": 4
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "A malefic lodged in the 8th, combined with hidden luminaries or a tight family/domestic context, is a grounded homicide signature rather than a simple background stress marker.",
+    "evidence": [
+      "houses.malefics_in_8th",
+      "planets.Sun",
+      "planets.Moon",
+      "houses.first_and_seventh_rulers_same_house",
+      "houses.fourth_ruler_house"
+    ]
+  },
+  {
+    "id": "domestic_partner_axis_contact",
+    "title": "Partner axis is active in a domestic matter",
+    "category": "Domestic",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.first_and_seventh_rulers_aspected": true
+            },
+            {
+              "houses.first_and_seventh_rulers_same_house": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "aspects.Venus_to_Saturn.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Saturn_to_Venus.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Venus_to_Mars.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Mars_to_Venus.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "planets.Moon.house": 4
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "planets.Moon.house": 4
+            },
+            {
+              "houses.fourth_ruler_in_4_8_12": true
+            },
+            {
+              "houses.seventh_ruler_house": [
+                2,
+                4,
+                7,
+                12
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Close 1st/7th contact plus relationship or domestic stress is a strong spouse or partner involvement marker.",
+    "evidence": [
+      "houses.first_and_seventh_rulers_aspected",
+      "houses.first_and_seventh_rulers_same_house",
+      "houses.seventh_ruler_house",
+      "aspects.Venus_to_Saturn",
+      "aspects.Venus_to_Mars",
+      "planets.Moon"
+    ]
+  },
+  {
+    "id": "domestic_partner_near_home_axis",
+    "title": "Partner involvement tied to the home axis",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.seventh_ruler_in_3_4_12": true
+            },
+            {
+              "houses.seventh_ruler_house": [
+                2,
+                4,
+                7,
+                12
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "planets.Moon.house": 4
+            },
+            {
+              "houses.fourth_ruler_in_4_8_12": true
+            },
+            {
+              "houses.fourth_ruler_hard_afflicted": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "aspects.Venus_to_Saturn.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Saturn_to_Venus.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Venus_to_Mars.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Mars_to_Venus.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Moon_to_Venus.type": [
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Moon_to_Venus.orb<=": 6
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Venus_to_Moon.type": [
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Venus_to_Moon.orb<=": 6
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Home-axis and relational symbolism is contextual only. It may support a separately established relationship mechanism, but it cannot independently classify spouse, partner, family, or abduction involvement.",
+    "evidence": [
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "planets.Moon"
+    ]
+  },
+  {
+    "id": "domestic_partner_confinement_pressure",
+    "title": "Partner-linked confinement or domestic violence pattern is active",
+    "category": "Domestic",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "case_context.adult_female_case": true
+        },
+        {
+          "any": [
+            {
+              "houses.first_and_seventh_rulers_aspected": true
+            },
+            {
+              "houses.first_and_seventh_rulers_same_house": true
+            },
+            {
+              "houses.first_and_seventh_rulers_hard_aspect": true
+            }
+          ]
+        },
+        {
+          "houses.seventh_ruler_in_8_or_12": true
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "moon.in_4_8_12": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.fourth_ruler_in_4_8_12": true
+            },
+            {
+              "houses.fourth_ruler_house": [
+                4,
+                8,
+                12
+              ]
+            },
+            {
+              "houses.malefics_angular_count>=": 1
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "CDC intimate-partner-violence guidance treats current or former partner harm as a distinct context, and NIBRS kidnapping/abduction includes unlawful detention as well as transport. In the forensic rule layer, 1st/7th contact with the other-person ruler in death/hidden houses, the victim or Moon under 8th/12th pressure, and a home-axis anchor supports partner-linked confinement or domestic violence rather than a generic missing-person reading.",
+    "evidence": [
+      "case_context.case_type",
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "moon"
+    ]
+  },
+  {
+    "id": "domestic_partner_proxy_or_contract_harm",
+    "title": "Domestic-by-proxy or partner-linked contract harm pattern is active",
+    "category": "Domestic",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "case_context.adult_female_case": true
+        },
+        {
+          "houses.first_and_seventh_rulers_hard_aspect": true
+        },
+        {
+          "any": [
+            {
+              "houses.seventh_ruler_house": [
+                5,
+                8,
+                11,
+                12
+              ]
+            },
+            {
+              "houses.fourth_and_fifth_rulers_same_house": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "all": [
+                {
+                  "aspects.Mercury_to_Mars.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Mercury_to_Mars.orb<=": 6
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Mars_to_Mercury.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Mars_to_Mercury.orb<=": 6
+                }
+              ]
+            },
+            {
+              "houses.counts.2>=": 2
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.neptune_in_4_8_12": true
+            },
+            {
+              "houses.malefics_angular_count>=": 1
+            },
+            {
+              "houses.counts.2>=": 3
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Domestic violence can be carried out through accomplices, payments, or intermediaries instead of direct partner contact. A hard victim/opponent axis, money or intermediary houses, Mercury-Mars attack/communication testimony, and 8th/12th Neptune or angular malefic pressure supports domestic-by-proxy harm rather than a purely random stranger event.",
+    "evidence": [
+      "case_context.case_type",
+      "houses.first_and_seventh_rulers_hard_aspect",
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.counts",
+      "houses.fourth_and_fifth_rulers_same_house",
+      "aspects.Mercury_to_Mars",
+      "houses.neptune_in_4_8_12",
+      "houses.malefics_angular_count"
+    ]
+  },
+  {
+    "id": "domestic_partner_route_abduction_pressure",
+    "title": "Ex-partner route-abduction or stalking pattern is active",
+    "category": "Domestic",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "case_context.adult_female_case": true
+        },
+        {
+          "moon.in_3_or_9": true
+        },
+        {
+          "houses.first_ruler_in_8_or_12": true
+        },
+        {
+          "any": [
+            {
+              "houses.seventh_ruler_house": [
+                11,
+                12
+              ]
+            },
+            {
+              "houses.eleventh_ruler_in_8_or_12": true
+            },
+            {
+              "houses.seventh_and_eleventh_same_ruler": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.fourth_ruler_in_8_or_12": true
+            },
+            {
+              "houses.tenth_ruler_house": [
+                8,
+                12
+              ]
+            },
+            {
+              "houses.emphasis12_strong": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "houses.fourth_ruler_hard_afflicted": true
+            },
+            {
+              "houses.malefics_angular_count>=": 1
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "CDC IPV guidance includes stalking and psychological coercion by current or former intimate partners, while NIBRS kidnapping/abduction includes unlawful transportation or detention. In adult-female route charts, a hidden victim ruler, Moon on the travel axis, 7th/11th known-person testimony, hidden home/public rulers, and malefic pressure supports an ex-partner stalking or route-abduction reading without promoting the same 4th/5th testimony into a child/family label.",
+    "evidence": [
+      "case_context.case_type",
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.eleventh_ruler",
+      "houses.eleventh_ruler_house",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "houses.tenth_ruler",
+      "houses.tenth_ruler_house",
+      "moon"
+    ]
+  },
+  {
+    "id": "family_domestic_moon_signature",
+    "title": "Family axis activated by Moon and home houses",
+    "category": "Context",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "planets.Moon.house": [
+                4,
+                8
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.fourth_ruler_in_8_or_12": true
+                },
+                {
+                  "any": [
+                    {
+                      "houses.counts.4>=": 1
+                    },
+                    {
+                      "houses.fourth_ruler_hard_afflicted": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "houses.fourth_ruler_hard_afflicted": true
+            },
+            {
+              "houses.malefics_in_8th>=": 1
+            }
+          ]
+        },
+        {
+          "not": {
+            "all": [
+              {
+                "case_context.adult_female_case": true
+              },
+              {
+                "houses.first_ruler_in_8_or_12": true
+              },
+              {
+                "moon.in_3_or_9": true
+              },
+              {
+                "houses.fourth_and_fifth_same_ruler": true
+              },
+              {
+                "houses.fourth_ruler_in_8_or_12": true
+              },
+              {
+                "houses.fifth_ruler_in_8_or_12": true
+              },
+              {
+                "houses.counts.5<=": 0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "rationale": "Family involvement should require a real home-axis signature plus separate death or malefic pressure; Moon-in-Cancer alone is too broad.",
+    "evidence": [
+      "planets.Moon",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house"
+    ]
+  },
+  {
+    "id": "family_home_axis_under_pressure",
+    "title": "Home and family axis under pressure",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "planets.Moon.house": [
+                4,
+                8
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.fourth_ruler_in_8_or_12": true
+                },
+                {
+                  "any": [
+                    {
+                      "houses.counts.4>=": 1
+                    },
+                    {
+                      "houses.fourth_ruler_hard_afflicted": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "planets.Moon.house": 4
+            },
+            {
+              "houses.fourth_ruler_in_4_8_12": true
+            },
+            {
+              "houses.fourth_ruler_hard_afflicted": true
+            },
+            {
+              "houses.counts.4>=": 1
+            },
+            {
+              "houses.fourth_and_fifth_same_ruler": true
+            },
+            {
+              "houses.fourth_and_fifth_rulers_same_house": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "houses.fourth_ruler_hard_afflicted": true
+            },
+            {
+              "houses.malefics_angular_count>=": 2
+            }
+          ]
+        },
+        {
+          "not": {
+            "all": [
+              {
+                "houses.seventh_ruler_in_10th": true
+              },
+              {
+                "any": [
+                  {
+                    "houses.first_ruler_in_8_or_12": true
+                  },
+                  {
+                    "houses.tenth_ruler_house": [
+                      8,
+                      12
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "not": {
+            "all": [
+              {
+                "case_context.adult_female_case": true
+              },
+              {
+                "houses.first_ruler_in_8_or_12": true
+              },
+              {
+                "moon.in_3_or_9": true
+              },
+              {
+                "houses.fourth_and_fifth_same_ruler": true
+              },
+              {
+                "houses.fourth_ruler_in_8_or_12": true
+              },
+              {
+                "houses.fifth_ruler_in_8_or_12": true
+              },
+              {
+                "houses.counts.5<=": 0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "rationale": "Occupied or pressured family houses can point to family involvement, but only when the home axis is separately anchored and under strong malefic pressure. Public-place seizure testimony should stay with the abduction/public axes unless there is separate household or relationship evidence.",
+    "evidence": [
+      "houses.counts",
+      "houses.fourth_ruler_house",
+      "moon",
+      "houses.malefics_angular_count"
+    ]
+  },
+  {
+    "id": "family_child_rulers_clustered",
+    "title": "Family and child significators cluster together",
+    "category": "Context",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.first_fifth_seventh_clustered": true
+            },
+            {
+              "houses.first_and_fifth_rulers_same_house": true
+            },
+            {
+              "houses.fifth_and_seventh_rulers_same_house": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "planets.Moon.house": 5
+            },
+            {
+              "houses.first_ruler_in_5th": true
+            },
+            {
+              "all": [
+                {
+                  "houses.fifth_ruler_in_8_or_12": true
+                },
+                {
+                  "houses.counts.5>=": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "houses.malefics_in_8th>=": 1
+            },
+            {
+              "houses.first_ruler_rules_8th": true
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Child-significator clustering should require more than generic 5th-house activation, because the 5th also governs recreation, sex, parties, and adult social context in disappearance charts.",
+    "evidence": [
+      "houses.first_ruler_house",
+      "houses.fifth_ruler_house",
+      "houses.seventh_ruler_house",
+      "houses.counts",
+      "houses.malefics_in_8th",
+      "moon"
+    ]
+  },
+  {
+    "id": "child_house_under_stress",
+    "title": "Child house under violence pressure",
+    "category": "Context",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "case_context.child_case": true
+            },
+            {
+              "houses.first_fifth_seventh_clustered": true
+            },
+            {
+              "all": [
+                {
+                  "houses.first_and_fifth_rulers_same_house": true
+                },
+                {
+                  "houses.counts.5>=": 2
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.fifth_and_seventh_rulers_same_house": true
+                },
+                {
+                  "houses.counts.5>=": 2
+                }
+              ]
+            },
+            {
+              "houses.fourth_and_fifth_same_ruler": true
+            },
+            {
+              "houses.fourth_and_fifth_rulers_same_house": true
+            },
+            {
+              "houses.seventh_ruler_house": 4
+            },
+            {
+              "all": [
+                {
+                  "planets.Sun.house": 5
+                },
+                {
+                  "houses.counts.5>=": 2
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "planets.Mars.house": [
+                    5,
+                    11
+                  ]
+                },
+                {
+                  "houses.counts.5>=": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "all": [
+                {
+                  "planets.Moon.house": 5
+                },
+                {
+                  "moon.hard_malefic_contact": true
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.first_ruler_in_5th": true
+                },
+                {
+                  "houses.counts.5>=": 2
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.fifth_ruler_in_8_or_12": true
+                },
+                {
+                  "houses.counts.5>=": 2
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.counts.5>=": 2
+                },
+                {
+                  "any": [
+                    {
+                      "planets.Mars.house": [
+                        5,
+                        11
+                      ]
+                    },
+                    {
+                      "planets.Saturn.house": [
+                        5,
+                        11
+                      ]
+                    },
+                    {
+                      "all": [
+                        {
+                          "planets.Sun.house": 5
+                        },
+                        {
+                          "any": [
+                            {
+                              "planets.Mars.house": 5
+                            },
+                            {
+                              "planets.Saturn.house": 5
+                            },
+                            {
+                              "aspects.Sun_to_Mars.type": [
+                                "conjunction",
+                                "square",
+                                "opposition"
+                              ]
+                            },
+                            {
+                              "aspects.Mars_to_Sun.type": [
+                                "conjunction",
+                                "square",
+                                "opposition"
+                              ]
+                            },
+                            {
+                              "aspects.Sun_to_Saturn.type": [
+                                "conjunction",
+                                "square",
+                                "opposition"
+                              ]
+                            },
+                            {
+                              "aspects.Saturn_to_Sun.type": [
+                                "conjunction",
+                                "square",
+                                "opposition"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_rules_8th": true
+            },
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "planets.Moon.house": 8
+            },
+            {
+              "all": [
+                {
+                  "houses.malefics_angular_count>=": 2
+                },
+                {
+                  "any": [
+                    {
+                      "case_context.child_case": true
+                    },
+                    {
+                      "planets.Sun.house": 5
+                    },
+                    {
+                      "houses.first_fifth_seventh_clustered": true
+                    },
+                    {
+                      "houses.fourth_and_fifth_same_ruler": true
+                    },
+                    {
+                      "houses.fourth_and_fifth_rulers_same_house": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "houses.malefics_in_8th>=": 1
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "A child-victim label should require explicit child context or compound child/family structure before 5th-house stress is promoted. Adult disappearance, disaster, public, and abduction charts often load the 5th through recreation, sex, leisure, or crowd/social settings. The family corpus still preserves older child-death aphorisms tying Mars or Saturn in the 5th/11th, or a Sun-dominated 5th under infortune pressure, to fatal child cases, but only when the surrounding chart actually corroborates a child axis.",
+    "evidence": [
+      "houses.fifth_ruler",
+      "houses.fifth_ruler_house",
+      "houses.counts",
+      "moon",
+      "houses.malefics_angular_count"
+    ]
+  },
+  {
+    "id": "child_family_overlap",
+    "title": "Child and family signatures overlap",
+    "category": "Context",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "planets.Moon.house": 5
+            },
+            {
+              "all": [
+                {
+                  "houses.first_ruler_in_5th": true
+                },
+                {
+                  "houses.counts.5>=": 2
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.fifth_ruler_in_8_or_12": true
+                },
+                {
+                  "houses.counts.5>=": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "planets.Moon.house": [
+                4,
+                8
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.fourth_ruler_in_8_or_12": true
+                },
+                {
+                  "any": [
+                    {
+                      "houses.counts.4>=": 1
+                    },
+                    {
+                      "houses.fourth_ruler_hard_afflicted": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "houses.fourth_ruler_hard_afflicted": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "houses.malefics_in_8th>=": 1
+            },
+            {
+              "houses.first_ruler_rules_8th": true
+            },
+            {
+              "houses.first_ruler_in_8_or_12": true
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Family overlap should only become a child label when there is direct child-house testimony, because adult abduction and sexual-assault charts can also energize the 5th without involving minors.",
+    "evidence": [
+      "houses.fifth_ruler",
+      "houses.fifth_ruler_house",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "planets.Moon"
+    ]
+  },
+  {
+    "id": "child_parental_harm_cluster",
+    "title": "Child or parental-child harm cluster is active",
+    "category": "Context",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "all": [
+                {
+                  "houses.first_ruler_in_5th": true
+                },
+                {
+                  "houses.counts.5>=": 2
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.fourth_and_fifth_same_ruler": true
+                },
+                {
+                  "any": [
+                    {
+                      "houses.fifth_ruler_house": [
+                        6,
+                        11
+                      ]
+                    },
+                    {
+                      "all": [
+                        {
+                          "houses.fifth_ruler_house": 5
+                        },
+                        {
+                          "houses.counts.5>=": 2
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "houses.first_ruler_rules_8th": true
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "planets.Mars.house": [
+                    5,
+                    11
+                  ]
+                },
+                {
+                  "any": [
+                    {
+                      "case_context.child_case": true
+                    },
+                    {
+                      "houses.first_fifth_seventh_clustered": true
+                    },
+                    {
+                      "houses.fifth_and_seventh_rulers_same_house": true
+                    },
+                    {
+                      "all": [
+                        {
+                          "houses.fourth_and_fifth_rulers_same_house": true
+                        },
+                        {
+                          "houses.counts.5>=": 2
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.fifth_ruler_in_8_or_12": true
+                },
+                {
+                  "any": [
+                    {
+                      "case_context.child_case": true
+                    },
+                    {
+                      "houses.first_and_seventh_rulers_same_house": true
+                    },
+                    {
+                      "houses.counts.5>=": 2
+                    },
+                    {
+                      "houses.fourth_ruler_hard_afflicted": true
+                    }
+                  ]
+                },
+                {
+                  "any": [
+                    {
+                      "planets.Moon.house": 8
+                    },
+                    {
+                      "houses.eighth_ruler_in_4_8_12": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.fourth_ruler_house": [
+                5,
+                6,
+                11,
+                12
+              ]
+            },
+            {
+              "houses.fourth_ruler_hard_afflicted": true
+            },
+            {
+              "houses.fourth_and_fifth_same_ruler": true
+            },
+            {
+              "houses.fourth_and_fifth_rulers_same_house": true
+            },
+            {
+              "houses.first_and_seventh_rulers_same_house": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "planets.Mars.house": [
+                5,
+                11
+              ]
+            },
+            {
+              "planets.Saturn.house": [
+                5,
+                11
+              ]
+            },
+            {
+              "houses.first_ruler_rules_8th": true
+            },
+            {
+              "houses.malefics_angular_count>=": 1
+            },
+            {
+              "planets.Moon.house": 8
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Child labels should still require compound child testimony, but older family-homicide charts can show the 4th/5th family-child axis through shared rulers or shared houses, Mars/Saturn pressure on the 5th/11th child axis, or the 5th ruler pulled into death/hidden houses.",
+    "evidence": [
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "houses.fifth_ruler",
+      "houses.fifth_ruler_house",
+      "houses.fourth_and_fifth_same_ruler",
+      "houses.fourth_and_fifth_rulers_same_house",
+      "houses.counts",
+      "planets.Mars",
+      "planets.Saturn",
+      "moon"
+    ]
+  },
+  {
+    "id": "family_household_relationship_cluster",
+    "title": "Family or household relationship cluster is active",
+    "category": "Family",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "houses.first_and_seventh_rulers_same_house": true
+        },
+        {
+          "any": [
+            {
+              "houses.fourth_ruler_house": [
+                3,
+                4,
+                7
+              ]
+            },
+            {
+              "houses.seventh_ruler_house": [
+                3,
+                4,
+                7
+              ]
+            },
+            {
+              "houses.fourth_ruler_in_4_8_12": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.first_and_fifth_rulers_same_house": true
+            },
+            {
+              "houses.fifth_and_seventh_rulers_same_house": true
+            },
+            {
+              "houses.fourth_ruler_house": [
+                3,
+                4,
+                7
+              ]
+            },
+            {
+              "houses.seventh_ruler_in_3_4_12": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "all": [
+                {
+                  "aspects.Venus_to_Saturn.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Venus_to_Saturn.orb<=": 6
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Saturn_to_Venus.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Saturn_to_Venus.orb<=": 6
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Moon_to_Venus.type": [
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Moon_to_Venus.orb<=": 6
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Venus_to_Moon.type": [
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Venus_to_Moon.orb<=": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "not": {
+            "any": [
+              {
+                "houses.seventh_ruler_in_10th": true
+              },
+              {
+                "all": [
+                  {
+                    "houses.seventh_ruler_in_3_or_9": true
+                  },
+                  {
+                    "any": [
+                      {
+                        "houses.first_ruler_in_8_or_12": true
+                      },
+                      {
+                        "moon.in_4_8_12": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "houses.tenth_ruler_house": [
+                      8,
+                      12
+                    ]
+                  },
+                  {
+                    "houses.first_ruler_in_8_or_12": true
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "rationale": "Family and household labels should come from relationship-house clustering anchored to a home or family axis plus separate relational pressure, not from generic same-house contact, public-route seizure testimony, or a worksite/6th-house harm pattern alone.",
+    "evidence": [
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "houses.fifth_ruler",
+      "houses.fifth_ruler_house",
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "aspects.Venus_to_Saturn",
+      "aspects.Moon_to_Venus"
+    ]
+  },
+  {
+    "id": "family_custody_child_violence_axis",
+    "title": "Family custody and child-present violence pattern is active",
+    "category": "Family",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "not": {
+            "case_context.adult_female_case": true
+          }
+        },
+        {
+          "houses.fourth_ruler_in_8_or_12": true
+        },
+        {
+          "any": [
+            {
+              "houses.fifth_ruler_house": [
+                6,
+                7,
+                8,
+                12
+              ]
+            },
+            {
+              "houses.counts.7>=": 2
+            },
+            {
+              "houses.counts.6>=": 2
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "all": [
+                {
+                  "aspects.Moon_to_Venus.type": [
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Moon_to_Venus.orb<=": 3
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Venus_to_Moon.type": [
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Venus_to_Moon.orb<=": 3
+                }
+              ]
+            },
+            {
+              "houses.counts.8>=": 2
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.counts.7>=": 2
+            },
+            {
+              "houses.seventh_ruler_in_3_4_12": true
+            },
+            {
+              "houses.third_ruler_house": 7
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Family-violence sources distinguish household/custody cases from ordinary partner conflict, and child-witness sources treat children as part of the event context even when the chart anchor is an adult rescue or assault. A 4th-house family ruler in death/hidden houses, 5th-house child testimony routed through service/adversary/death houses, tight Moon-Venus family stress, and a crowded 7th/adversary axis supports a family custody and child-present violence reading.",
+    "evidence": [
+      "case_context.case_type",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "houses.fifth_ruler",
+      "houses.fifth_ruler_house",
+      "houses.third_ruler_house",
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.counts",
+      "aspects.Moon_to_Venus"
+    ]
+  },
+  {
+    "id": "family_child_homicide_axis_cluster",
+    "title": "Family homicide and child-house harm cluster is active",
+    "category": "Family",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "all": [
+                {
+                  "houses.fourth_and_fifth_same_ruler": true
+                },
+                {
+                  "any": [
+                    {
+                      "houses.fifth_ruler_house": [
+                        11,
+                        12
+                      ]
+                    },
+                    {
+                      "all": [
+                        {
+                          "houses.fifth_ruler_house": 6
+                        },
+                        {
+                          "any": [
+                            {
+                              "houses.counts.5>=": 2
+                            },
+                            {
+                              "houses.first_ruler_in_5th": true
+                            },
+                            {
+                              "planets.Mars.house": [
+                                5,
+                                11
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "houses.counts.5>=": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.fourth_and_fifth_rulers_same_house": true
+                },
+                {
+                  "any": [
+                    {
+                      "houses.fifth_ruler_house": [
+                        11,
+                        12
+                      ]
+                    },
+                    {
+                      "all": [
+                        {
+                          "houses.fifth_ruler_house": 6
+                        },
+                        {
+                          "any": [
+                            {
+                              "houses.counts.5>=": 2
+                            },
+                            {
+                              "houses.first_ruler_in_5th": true
+                            },
+                            {
+                              "planets.Mars.house": [
+                                5,
+                                11
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "houses.counts.5>=": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.first_fifth_seventh_clustered": true
+                },
+                {
+                  "any": [
+                    {
+                      "houses.counts.5>=": 2
+                    },
+                    {
+                      "planets.Mars.house": [
+                        5,
+                        11
+                      ]
+                    },
+                    {
+                      "planets.Moon.house": 8
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.first_ruler_in_5th": true
+                },
+                {
+                  "houses.counts.5>=": 2
+                },
+                {
+                  "houses.fourth_ruler_house": 5
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.fifth_ruler_in_8_or_12": true
+                },
+                {
+                  "houses.first_and_seventh_rulers_same_house": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "planets.Mars.house": [
+                5,
+                11
+              ]
+            },
+            {
+              "planets.Saturn.house": [
+                5,
+                11
+              ]
+            },
+            {
+              "houses.first_ruler_rules_8th": true
+            },
+            {
+              "houses.malefics_angular_count>=": 1
+            },
+            {
+              "planets.Moon.house": 8
+            }
+          ]
+        },
+        {
+          "not": {
+            "all": [
+              {
+                "case_context.adult_female_case": true
+              },
+              {
+                "houses.first_ruler_in_8_or_12": true
+              },
+              {
+                "moon.in_3_or_9": true
+              },
+              {
+                "houses.fourth_and_fifth_same_ruler": true
+              },
+              {
+                "houses.fourth_ruler_in_8_or_12": true
+              },
+              {
+                "houses.fifth_ruler_in_8_or_12": true
+              },
+              {
+                "houses.counts.5<=": 0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "rationale": "Family homicide labels need a family/child structure plus separate harm pressure. This restores filial, parental, and familicide charts where the 4th-house family axis and 5th-house child axis share rulers, share houses, or are clustered with the victim/opponent rulers under Mars, Saturn, Moon, or death-ruler pressure.",
+    "evidence": [
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "houses.fifth_ruler",
+      "houses.fifth_ruler_house",
+      "houses.fourth_and_fifth_same_ruler",
+      "houses.fourth_and_fifth_rulers_same_house",
+      "houses.first_fifth_seventh_clustered",
+      "houses.first_and_seventh_rulers_same_house",
+      "houses.counts",
+      "planets.Mars",
+      "planets.Saturn",
+      "moon"
+    ]
+  },
+  {
+    "id": "family_home_opponent_homicide_axis",
+    "title": "Family homicide pressure concentrates on the home/opponent axis",
+    "category": "Family",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "houses.seventh_ruler_house": 4
+        },
+        {
+          "houses.first_ruler_rules_8th": true
+        },
+        {
+          "any": [
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "planets.Mars.house": 4
+            },
+            {
+              "houses.fourth_ruler_hard_afflicted": true
+            },
+            {
+              "houses.malefics_angular_count>=": 1
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "When the opponent or perpetrator ruler is placed in the home, and the life/death axis or Moon is under harm pressure, the chart supports family-household homicide rather than a public or random stranger reading.",
+    "evidence": [
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.first_ruler",
+      "houses.first_ruler_rules_8th",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "planets.Mars",
+      "moon"
+    ]
+  },
+  {
+    "id": "context_child_case_axis",
+    "title": "Child victim or child-case context is active",
+    "category": "Children",
+    "weight": 3,
+    "condition": {
+      "case_context.child_case": true
+    },
+    "rationale": "Explicit case context identifies the subject as a child; keep this as a context marker rather than deriving it from weak 5th-house testimony alone.",
+    "evidence": [
+      "case_context.case_type"
+    ]
+  },
+  {
+    "id": "water_disappearance_signatures",
+    "title": "Water or drowning signatures are foregrounded",
+    "category": "Water",
+    "weight": 3,
+    "condition": {
+      "any": [
+        {
+          "all": [
+            {
+              "moon.water_sign": true
+            },
+            {
+              "moon.in_4_8_12": true
+            },
+            {
+              "moon.hard_malefic_contact": true
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "houses.neptune_present": true
+            },
+            {
+              "houses.neptune_in_4_8_12": true
+            },
+            {
+              "any": [
+                {
+                  "moon.water_sign": true
+                },
+                {
+                  "houses.water_cusp_4_8_12>=": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "houses.water_cusp_4_8_12>=": 2
+            },
+            {
+              "houses.first_ruler_in_4_8_12": true
+            },
+            {
+              "any": [
+                {
+                  "moon.hard_malefic_contact": true
+                },
+                {
+                  "houses.neptune_present": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Water classification should rest on compound water testimony; a single Moon-in-water signature is too weak for a drowning or water-disposal label.",
+    "evidence": [
+      "moon",
+      "houses.signs",
+      "houses.neptune_present",
+      "houses.neptune_in_4_8_12"
+    ]
+  },
+  {
+    "id": "water_death_edge_disappearance_signature",
+    "title": "Water disappearance or recovery context is active",
+    "category": "Water",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "houses.water_cusp_4_8_12>=": 2
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_rules_8th": true
+            },
+            {
+              "planets.Moon.house": 8
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.emphasis12_count>=": 1
+            },
+            {
+              "houses.mute_signs_on_angles": true
+            },
+            {
+              "planets.Mercury.retrograde": true
+            },
+            {
+              "houses.ninth_ruler_in_8_or_12": true
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Compound water-house emphasis plus 8th/12th disappearance pressure supports a water or marsh recovery context even when the Moon itself is not in a water sign.",
+    "evidence": [
+      "houses.water_cusp_4_8_12",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "houses.fifth_ruler",
+      "houses.fifth_ruler_house",
+      "houses.ninth_ruler",
+      "houses.ninth_ruler_house",
+      "moon"
+    ]
+  },
+  {
+    "id": "violence_water_death_under_malefic_pressure",
+    "title": "Water death under malefic pressure points to violence or homicide",
+    "category": "Violence",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "houses.water_cusp_4_8_12>=": 2
+        },
+        {
+          "moon.hard_malefic_contact": true
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_house": 4
+            },
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "planets.Moon.house": 8
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Water or drowning testimony becomes a violence/homicide direction when it is tied to the victim or death houses and the Moon is under hard malefic pressure. This keeps waterborne transport disasters in the disaster lane unless the victim/death axis is also personally stressed.",
+    "evidence": [
+      "houses.water_cusp_4_8_12",
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "moon"
+    ]
+  },
+  {
+    "id": "abduction_missing_person_signature",
+    "title": "Abduction or missing-person pattern is active",
+    "category": "Abduction",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.seventh_ruler_in_12th": true
+            },
+          {
+            "all": [
+              {
+                "aspects.Mars_to_Neptune.type": [
+                  "conjunction",
+                  "square",
+                  "opposition"
+                ]
+              },
+              {
+                "aspects.Mars_to_Neptune.orb<=": 4
+              },
+              {
+                "any": [
+                  {
+                    "planets.Mars.angular": true
+                  },
+                  {
+                    "houses.neptune_angular": true
+                  },
+                  {
+                    "houses.first_ruler": "Mars"
+                  },
+                  {
+                    "houses.seventh_ruler": "Mars"
+                  }
+                ]
+              }
+            ]
+            },
+            {
+              "all": [
+                {
+                  "houses.seventh_ruler_in_3_4_12": true
+                },
+                {
+                  "any": [
+                  {
+                    "houses.neptune_in_4_8_12": true
+                  },
+                    {
+                      "moon.water_sign": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_rules_8th": true
+            },
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "houses.fifth_ruler_in_8_or_12": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.emphasis12_strong": true
+            },
+            {
+              "planets.Moon.house": 12
+            },
+            {
+              "houses.emphasis12_count>=": 1
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Abduction needs an explicit abductor or opponent signal plus hidden/death pressure; hidden houses alone are not enough.",
+    "evidence": [
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.emphasis12_count",
+      "aspects.Mars_to_Neptune",
+      "aspects.Neptune_to_Mars",
+      "houses.first_ruler",
+      "houses.fifth_ruler",
+      "houses.counts"
+    ]
+  },
+  {
+    "id": "missing_person_concealed_route_signature",
+    "title": "Missing-person concealed route pattern is active",
+    "category": "Abduction",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "planets.Moon.house": 8
+            },
+            {
+              "all": [
+                {
+                  "houses.first_ruler_rules_8th": true
+                },
+                {
+                  "houses.water_cusp_4_8_12>=": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.emphasis12_count>=": 1
+            },
+            {
+              "houses.ninth_ruler_in_8_or_12": true
+            },
+            {
+              "houses.fourth_ruler_in_8_or_12": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "planets.Mercury.retrograde": true
+            },
+            {
+              "houses.mute_signs_on_angles": true
+            },
+            {
+              "moon.in_4_8_12": true
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "This is a missing-person marker rather than a full kidnapping claim: the life/death axis is active, route or concealed-house testimony is present, and communications are obscured.",
+    "evidence": [
+      "houses.first_ruler",
+      "houses.eighth_ruler",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "houses.ninth_ruler",
+      "houses.ninth_ruler_house",
+      "planets.Mercury",
+      "moon"
+    ]
+  },
+  {
+    "id": "abduction_child_home_intrusion_signature",
+    "title": "Child home-intrusion abduction pattern is active",
+    "category": "Abduction",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "case_context.child_case": true
+        },
+        {
+          "houses.seventh_ruler_in_3_4_12": true
+        },
+        {
+          "any": [
+            {
+              "houses.first_and_seventh_rulers_aspected": true
+            },
+            {
+              "houses.first_and_seventh_rulers_same_house": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.counts.4>=": 2
+            },
+            {
+              "houses.fourth_ruler_house": [
+                3,
+                4,
+                6,
+                12
+              ]
+            },
+            {
+              "houses.north_node_house": 4
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "aspects.Moon_to_Mars.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Mars_to_Moon.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "planets.Mars.house": 5
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "A child case with the other-person ruler tied to the home axis, direct victim/opponent contact, and coercive Moon/Mars pressure supports seizure from a residence instead of generic deception.",
+    "evidence": [
+      "case_context.case_type",
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.first_and_seventh_rulers_aspected",
+      "houses.first_and_seventh_rulers_same_house",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "houses.counts",
+      "moon",
+      "aspects.Moon_to_Mars"
+    ]
+  },
+  {
+    "id": "abduction_transport_or_public_seizure_signature",
+    "title": "Abduction or forced-seizure transport pattern is active",
+    "category": "Abduction",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.seventh_ruler_in_8_or_12": true
+            },
+            {
+              "houses.seventh_ruler_in_3_or_9": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "moon.in_3_or_9": true
+            },
+            {
+              "houses.third_ruler_in_8_or_12": true
+            },
+            {
+              "houses.ninth_ruler_in_8_or_12": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "houses.first_ruler_hard_afflicted": true
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Abduction requires more than hidden custody alone: the 7th identifies the abductor, the 3rd/9th show movement or transport, and coercive pressure on the victim distinguishes a seizure from a voluntary departure.",
+    "evidence": [
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.third_ruler",
+      "houses.third_ruler_house",
+      "houses.ninth_ruler",
+      "houses.ninth_ruler_house",
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "moon"
+    ]
+  },
+  {
+    "id": "abduction_public_place_seizure_signature",
+    "title": "Abduction or public-place seizure pattern is active",
+    "category": "Abduction",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "houses.seventh_ruler_in_10th": true
+        },
+        {
+          "houses.tenth_ruler_in_8_or_12": true
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "houses.first_ruler_hard_afflicted": true
+            },
+            {
+              "moon.hard_malefic_contact": true
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "A 7th-ruler/10th-house contact describes a public meeting or public exposure, while 8th/12th pressure marks death, coercion, or hidden custody; taken together, that supports a public seizure rather than ordinary public visibility.",
+    "evidence": [
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.tenth_ruler",
+      "houses.tenth_ruler_house",
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "moon"
+    ]
+  },
+  {
+    "id": "abduction_worksite_or_assignment_seizure_signature",
+    "title": "Abduction or worksite-seizure pattern is active",
+    "category": "Abduction",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.seventh_ruler_house": 6
+            },
+            {
+              "houses.sixth_ruler_in_7th": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.counts.6>=": 3
+            },
+            {
+              "houses.malefics_in_6th>=": 1
+            },
+            {
+              "houses.third_ruler_house": 6
+            },
+            {
+              "houses.third_ruler_house": 9
+            },
+            {
+              "houses.ninth_ruler_house": 3
+            },
+            {
+              "moon.in_3_or_9": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.tenth_ruler_in_8_or_12": true
+            },
+            {
+              "houses.tenth_ruler_hard_afflicted": true
+            },
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "houses.first_ruler_hard_afflicted": true
+            },
+            {
+              "moon.hard_malefic_contact": true
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "A 6th/7th link can describe contact through work, service, or a worksite, while the 3rd/9th describe movement, vehicles, and travel. When that assignment pattern is coupled with route pressure and public or 8th/12th coercive pressure, it supports a seizure on assignment rather than routine job stress.",
+    "evidence": [
+      "houses.sixth_ruler",
+      "houses.sixth_ruler_house",
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.tenth_ruler",
+      "houses.tenth_ruler_house",
+      "houses.counts",
+      "moon"
+    ]
+  },
+  {
+    "id": "abduction_confrontation_route_seizure_signature",
+    "title": "Abduction or confrontation-on-the-route pattern is active",
+    "category": "Abduction",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "houses.seventh_ruler_house": 1
+        },
+        {
+          "any": [
+            {
+              "houses.third_ruler_house": 9
+            },
+            {
+              "houses.ninth_ruler_house": 3
+            },
+            {
+              "moon.in_3_or_9": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "houses.first_ruler_hard_afflicted": true
+            },
+            {
+              "houses.malefics_in_6th>=": 1
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "A 7th ruler in the 1st describes a sudden confrontation, while the 3rd/9th describe route and travel; when that confrontation lands on a movement axis with separate coercive pressure, it supports a route seizure rather than an ordinary meeting.",
+    "evidence": [
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.third_ruler",
+      "houses.third_ruler_house",
+      "houses.ninth_ruler",
+      "houses.ninth_ruler_house",
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "moon"
+    ]
+  },
+  {
+    "id": "abduction_transient_hospitality_seizure_signature",
+    "title": "Abduction or transient-stay seizure pattern is active",
+    "category": "Abduction",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "houses.seventh_ruler_house": 5
+        },
+        {
+          "houses.first_ruler_house": 3
+        },
+        {
+          "any": [
+            {
+              "houses.third_ruler_house": 3
+            },
+            {
+              "houses.third_ruler_house": 9
+            },
+            {
+              "houses.ninth_ruler_house": 3
+            },
+            {
+              "houses.ninth_ruler_house": 9
+            },
+            {
+              "moon.in_3_or_9": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler": "Venus"
+            },
+            {
+              "houses.angles_signs.C1": "Taurus"
+            },
+            {
+              "houses.angles_signs.C1": "Libra"
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.fifth_and_seventh_rulers_same_house": true
+            },
+            {
+              "houses.counts.5>=": 3
+            }
+          ]
+        },
+        {
+          "houses.mute_signs_on_angles": true
+        }
+      ]
+    },
+    "rationale": "The 7th can signify the abductor, the 3rd/9th movement or the abductor's vehicle, and the 5th outside interests or adult social settings. Hotels are distinguished from homes through Venus/Taurus testimony. When those signals converge, the chart can describe a seizure from a transient or hospitality setting even before 12th-house captivity dominates.",
+    "evidence": [
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "houses.third_ruler",
+      "houses.third_ruler_house",
+      "houses.ninth_ruler",
+      "houses.ninth_ruler_house",
+      "houses.counts",
+      "houses.angles_signs",
+      "moon"
+    ]
+  },
+  {
+    "id": "abduction_social_or_group_gathering_seizure_signature",
+    "title": "Abduction or social-gathering seizure pattern is active",
+    "category": "Context",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.seventh_ruler_house": 5
+            },
+            {
+              "houses.eleventh_ruler_house": 5
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.counts.5>=": 3
+            },
+            {
+              "houses.fifth_and_seventh_rulers_same_house": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.fifth_ruler_in_8_or_12": true
+            },
+            {
+              "houses.eleventh_ruler_in_8_or_12": true
+            },
+            {
+              "houses.emphasis12_count>=": 1
+            },
+            {
+              "planets.Sun.house": 12
+            },
+            {
+              "planets.Moon.house": 12
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.mute_signs_on_angles": true
+            },
+            {
+              "houses.mute_sign_on_3rd_or_9th": true
+            },
+            {
+              "solar.combustion": [
+                "Mercury",
+                "Venus"
+              ]
+            },
+            {
+              "solar.under_beams": [
+                "Mercury",
+                "Venus"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "The 5th describes adult social life, entertainment, parties, and outside interests; the 11th friends and associates; the 7th the abductor or other person; and the 12th confinement. When a social setting is tightly tied to the 7th or 11th and separate hidden-custody testimony is present, the chart supports a social or group-gathering seizure rather than mere deception noise.",
+    "evidence": [
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.eleventh_ruler",
+      "houses.eleventh_ruler_house",
+      "houses.fifth_ruler",
+      "houses.fifth_ruler_house",
+      "houses.counts",
+      "houses.emphasis12_count",
+      "solar.combustion",
+      "solar.under_beams"
+    ]
+  },
+  {
+    "id": "abduction_deceptive_public_or_assignment_seizure_signature",
+    "title": "Abduction or deceptive public-assignment seizure pattern is active",
+    "category": "Abduction",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.seventh_and_tenth_same_ruler": true
+            },
+            {
+              "houses.seventh_ruler_in_10th": true
+            },
+            {
+              "houses.tenth_ruler_house": 7
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.third_ruler_house": [
+                3,
+                9
+              ]
+            },
+            {
+              "houses.ninth_ruler_house": [
+                3,
+                9
+              ]
+            },
+            {
+              "moon.in_3_or_9": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "planets.Mercury.retrograde": true
+            },
+            {
+              "solar.combustion": [
+                "Mercury"
+              ]
+            },
+            {
+              "solar.under_beams": [
+                "Mercury"
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "houses.first_ruler_hard_afflicted": true
+            },
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "houses.malefics_angular_count>=": 1
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "The 7th can signify the abductor, the 10th public or professional exposure, and the 3rd/9th roads, vehicles, and movement. When those axes converge under deceptive Mercury testimony and separate coercive pressure on the victim, the chart supports a fake-authority, assignment, or public-facing seizure rather than an accident narrative.",
+    "evidence": [
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.tenth_ruler",
+      "houses.tenth_ruler_house",
+      "houses.seventh_and_tenth_same_ruler",
+      "houses.third_ruler",
+      "houses.third_ruler_house",
+      "houses.ninth_ruler",
+      "houses.ninth_ruler_house",
+      "solar.combustion",
+      "solar.under_beams",
+      "moon"
+    ]
+  },
+  {
+    "id": "witness_or_accomplice_signature",
+    "title": "Witness or accomplice signatures are active",
+    "category": "Context",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.third_ruler_in_8_or_12": true
+            },
+            {
+              "houses.eleventh_ruler_in_8_or_12": true
+            },
+            {
+              "houses.eleventh_ruler_house": 7
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.first_and_seventh_rulers_same_house": true
+            },
+            {
+              "houses.emphasis12_strong": true
+            },
+            {
+              "planets.Sun.house": 12
+            },
+            {
+              "planets.Moon.house": 12
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Hidden 3rd/11th-house links or a 7th/11th crossover often point to witnesses, helpers, or accomplices close to the main actor.",
+    "evidence": [
+      "houses.third_ruler",
+      "houses.third_ruler_house",
+      "houses.eleventh_ruler",
+      "houses.eleventh_ruler_house",
+      "houses.seventh_ruler_house",
+      "houses.first_and_seventh_rulers_same_house",
+      "houses.emphasis12_count"
+    ]
+  },
+  {
+    "id": "friend_or_associate_axis_active",
+    "title": "Friend or close associate axis is active",
+    "category": "Associates",
+    "weight": 3,
+    "condition": {
+      "any": [
+        {
+          "houses.seventh_and_eleventh_same_ruler": true
+        },
+        {
+          "all": [
+            {
+              "houses.seventh_ruler_house": 11
+            },
+            {
+              "houses.first_and_seventh_rulers_same_house": false
+            }
+          ]
+        },
+        {
+          "houses.eleventh_ruler_house": 7
+        },
+        {
+          "all": [
+            {
+              "houses.eleventh_ruler_angular": true
+            },
+            {
+              "any": [
+                {
+                  "houses.first_and_seventh_rulers_aspected": true
+                },
+                {
+                  "houses.first_and_seventh_rulers_same_house": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "When the 7th and 11th houses connect, the case often points toward a friend, associate, or someone already known to the victim.",
+    "evidence": [
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.eleventh_ruler",
+      "houses.eleventh_ruler_house",
+      "houses.seventh_and_eleventh_same_ruler",
+      "houses.first_and_seventh_rulers_aspected",
+      "houses.first_and_seventh_rulers_same_house"
+    ]
+  },
+  {
+    "id": "known_person_route_harm_moon_dispositor_bridge",
+    "title": "Moon dispositor links route harm to a known-person or close associate axis",
+    "category": "Associates",
+    "weight": 2,
+    "condition": {
+      "all": [
+        {
+          "moon.dispositor_to_seventh_ruler_hard": true
+        },
+        {
+          "moon.dispositor_to_seventh_ruler_orb<=": 2
+        },
+        {
+          "houses.seventh_ruler_in_8_or_12": true
+        },
+        {
+          "any": [
+            {
+              "houses.sixth_ruler_house": 9
+            },
+            {
+              "houses.ninth_ruler_house": 9
+            },
+            {
+              "houses.third_ruler_house": [
+                3,
+                9
+              ]
+            },
+            {
+              "planets.Mars.house": 10
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "all": [
+                {
+                  "aspects.Mercury_to_Mars.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Mercury_to_Mars.orb<=": 6
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Mars_to_Mercury.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Mars_to_Mercury.orb<=": 6
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Mercury_to_Saturn.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Mercury_to_Saturn.orb<=": 6
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Saturn_to_Mercury.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Saturn_to_Mercury.orb<=": 6
+                }
+              ]
+            },
+            {
+              "houses.malefics_in_8th>=": 1
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "In route or transport-harm charts, the Moon can describe the victim and movement, while the Moon's dispositor shows how that testimony is handled. A tight hard contact from the Moon's dispositor to the 7th ruler, with the 7th ruler in death or hidden houses and separate route/vehicle pressure, supports a known-person or close-associate bridge without by itself claiming a spouse or family motive.",
+    "evidence": [
+      "moon",
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.third_ruler",
+      "houses.third_ruler_house",
+      "houses.sixth_ruler",
+      "houses.sixth_ruler_house",
+      "houses.ninth_ruler",
+      "houses.ninth_ruler_house",
+      "aspects.Mercury_to_Mars",
+      "aspects.Mercury_to_Saturn"
+    ]
+  },
+  {
+    "id": "violence_known_person_social_concealment_pattern",
+    "title": "Known-person violence pattern is active in a social or after-hours setting",
+    "category": "Violence",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.seventh_and_eleventh_same_ruler": true
+            },
+            {
+              "houses.seventh_ruler_house": 11
+            },
+            {
+              "houses.eleventh_ruler_house": 7
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.first_and_fifth_rulers_same_house": true
+            },
+            {
+              "houses.fifth_ruler_house": [
+                5,
+                7,
+                11
+              ]
+            },
+            {
+              "houses.counts.5>=": 2
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "planets.Sun.house": 12
+            },
+            {
+              "planets.Moon.house": 12
+            },
+            {
+              "houses.emphasis12_count>=": 1
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.eighth_ruler_house": [
+                1,
+                7,
+                11,
+                12
+              ]
+            },
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "houses.malefics_angular_count>=": 1
+            },
+            {
+              "houses.first_ruler_in_8_or_12": true
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "The 5th covers parties, recreation, and adult social life; the 11th friends and acquaintances; the 7th the other person or attacker; and the 12th concealment. When those social and known-person axes converge under hidden-house and death pressure, the chart points toward violence by someone from the victim's social circle rather than a purely public or accidental narrative.",
+    "evidence": [
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.eleventh_ruler",
+      "houses.eleventh_ruler_house",
+      "houses.seventh_and_eleventh_same_ruler",
+      "houses.fifth_ruler",
+      "houses.fifth_ruler_house",
+      "houses.counts",
+      "houses.eighth_ruler",
+      "houses.eighth_ruler_house",
+      "houses.emphasis12_count",
+      "moon"
+    ]
+  },
+  {
+    "id": "violence_known_person_home_axis_pressure",
+    "title": "Known-person home-axis violence pattern is active",
+    "category": "Violence",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.first_and_seventh_rulers_aspected": true
+            },
+            {
+              "houses.seventh_and_eleventh_same_ruler": true
+            },
+            {
+              "houses.seventh_ruler_house": 11
+            },
+            {
+              "houses.eleventh_ruler_house": 7
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_house": 4
+            },
+            {
+              "houses.fourth_ruler_house": 4
+            },
+            {
+              "houses.eleventh_ruler_house": 4
+            },
+            {
+              "houses.fourth_ruler_in_4_8_12": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "all": [
+                {
+                  "aspects.Moon_to_Mars.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Moon_to_Mars.orb<=": 8
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Mars_to_Moon.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Mars_to_Moon.orb<=": 8
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "planets.Mars.house": [
+                    3,
+                    4,
+                    6
+                  ]
+                },
+                {
+                  "planets.Mars.mute_sign": true
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "planets.Mars.house": [
+                    3,
+                    4,
+                    6
+                  ]
+                },
+                {
+                  "houses.mute_signs_on_angles": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "not": {
+            "any": [
+              {
+                "houses.first_ruler_house": 9
+              },
+              {
+                "houses.third_ruler_house": 9
+              },
+              {
+                "houses.seventh_ruler_in_3_or_9": true
+              },
+              {
+                "all": [
+                  {
+                    "moon.in_3_or_9": true
+                  },
+                  {
+                    "houses.third_ruler_house": [
+                      3,
+                      9
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "rationale": "The 7th/11th describe known-person access, the 4th residence or scene base, and hard Moon/Mars or Mars-in-route testimony violence. This catches home-axis known-person violence without requiring a pure 8th/12th death-house pattern, while leaving strong 3rd/9th-house travel charts to the accident or abduction classifiers.",
+    "evidence": [
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.eleventh_ruler",
+      "houses.eleventh_ruler_house",
+      "aspects.Moon_to_Mars",
+      "aspects.Mars_to_Moon",
+      "planets.Mars"
+    ]
+  },
+  {
+    "id": "public_or_authority_axis_foregrounded",
+    "title": "Public or authority axis is foregrounded",
+    "category": "Public",
+    "weight": 2,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.tenth_ruler_angular": true
+            },
+            {
+              "houses.counts.10>=": 2
+            },
+            {
+              "houses.first_ruler_house": 10
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "moon.in_4_8_12": true
+            },
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "houses.malefics_in_8th>=": 1
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "A strong 10th-house or solar signature tied to violence/hidden-house pressure points to an authority, public, or celebrity-linked case.",
+    "evidence": [
+      "houses.tenth_ruler",
+      "houses.tenth_ruler_house",
+      "houses.counts",
+      "planets.Sun",
+      "houses.first_ruler_house",
+      "moon",
+      "houses.malefics_in_8th"
+    ]
+  },
+  {
+    "id": "public_figure_or_leader_axis",
+    "title": "Solar authority axis marks a public figure or leader case",
+    "category": "Public",
+    "weight": 2,
+    "condition": {
+      "all": [
+        {
+          "planets.Sun.angular": true
+        },
+        {
+          "houses.tenth_ruler_house": [
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "houses.first_ruler_rules_8th": true
+            },
+            {
+              "houses.malefics_angular_count>=": 2
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Salerno repeatedly treats the solar and 10th-house axis as the signature of public figures, authorities, or world leaders. Require an angular Sun, a live 10th-house linkage, and separate violence pressure before reading a case as publicly exposed.",
+    "evidence": [
+      "planets.Sun",
+      "houses.tenth_ruler",
+      "houses.tenth_ruler_house",
+      "houses.first_ruler_house",
+      "houses.malefics_angular_count"
+    ]
+  },
+  {
+    "id": "domestic_partner_known_spouse_homicide",
+    "title": "Partner-linked homicide pattern is active",
+    "category": "Domestic",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "houses.first_ruler_house": 7
+        },
+        {
+          "any": [
+            {
+              "houses.fourth_ruler_house": 7
+            },
+            {
+              "planets.Venus.house": 4
+            },
+            {
+              "houses.counts.7>=": 2
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.seventh_ruler_house": [
+                8,
+                12
+              ]
+            },
+            {
+              "aspects.Mercury_to_Saturn.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Saturn_to_Mercury.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Moon_to_Venus.type": [
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Venus_to_Moon.type": [
+                "square",
+                "opposition"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "When the victim ruler falls onto the partner axis and the domestic significators are pressured, the chart points toward partner-linked homicide rather than a random outsider. The 6th can signify servants, repairmen, and work/service intermediaries, so a bare 7th-ruler-in-6th testimony is too broad to stand in for a spouse by itself.",
+    "evidence": [
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "planets.Venus",
+      "aspects.Mercury_to_Saturn",
+      "aspects.Moon_to_Venus"
+    ]
+  },
+  {
+    "id": "violence_home_entry_service_pretext_pattern",
+    "title": "Stranger-at-home or service-pretext violence pattern is active",
+    "category": "Violence",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.first_ruler_house": 7
+            },
+            {
+              "houses.fourth_ruler_house": 7
+            },
+            {
+              "houses.seventh_ruler_house": 4
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.seventh_ruler_house": 6
+            },
+            {
+              "houses.sixth_ruler_in_7th": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "houses.first_ruler_rules_8th": true
+            },
+            {
+              "houses.sixth_ruler_house": 8
+            },
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "aspects.Venus_to_Saturn.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Saturn_to_Venus.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "The 4th signifies the home or residence, the 7th the attacker or stranger, and the 6th servants, repairmen, domestic workers, and service intermediaries. When the home axis is pulled onto the attacker and service axis under separate death or malefic pressure, the chart supports stranger-at-home violence or a deceptive-entry pattern more than spouse conflict.",
+    "evidence": [
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "houses.fourth_ruler",
+      "houses.fourth_ruler_house",
+      "houses.sixth_ruler",
+      "houses.sixth_ruler_house",
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "aspects.Venus_to_Saturn",
+      "moon"
+    ]
+  },
+  {
+    "id": "violence_proxy_or_contract_attack_pattern",
+    "title": "Contract or proxy homicide/assault pattern is active",
+    "category": "Violence",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "case_context.adult_female_case": true
+        },
+        {
+          "houses.first_and_seventh_rulers_hard_aspect": true
+        },
+        {
+          "any": [
+            {
+              "all": [
+                {
+                  "aspects.Mercury_to_Mars.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Mercury_to_Mars.orb<=": 6
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Mars_to_Mercury.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Mars_to_Mercury.orb<=": 6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.neptune_in_4_8_12": true
+            },
+            {
+              "planets.Neptune.house": 8
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.counts.2>=": 2
+            },
+            {
+              "houses.fourth_and_fifth_rulers_same_house": true
+            },
+            {
+              "houses.malefics_angular_count>=": 1
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "FBI UCR definitions separate willful homicide and aggravated assault from accidents. In a forensic chart, hard 1st/7th conflict plus Mercury-Mars attack testimony, death/hidden Neptune, and money/intermediary or angular malefic pressure supports homicide or aggravated assault through a proxy, contract, or planned intermediary rather than an accidental event.",
+    "evidence": [
+      "case_context.case_type",
+      "houses.first_ruler",
+      "houses.first_ruler_house",
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house",
+      "houses.counts",
+      "aspects.Mercury_to_Mars",
+      "houses.neptune_in_4_8_12",
+      "planets.Neptune",
+      "houses.malefics_angular_count"
+    ]
+  },
+  {
+    "id": "family_parental_axis_homicide",
+    "title": "Family homicide pressure concentrates on parental/public houses",
+    "category": "Family",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.counts.10>=": 2
+            },
+            {
+              "houses.first_ruler_house": 10
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "all": [
+                {
+                  "houses.counts.5>=": 2
+                },
+                {
+                  "any": [
+                    {
+                      "houses.counts.4>=": 1
+                    },
+                    {
+                      "houses.fourth_ruler_in_4_8_12": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "planets.Moon.house": 5
+                },
+                {
+                  "houses.seventh_ruler_house": 10
+                }
+              ]
+            },
+            {
+              "houses.fifth_ruler_house": [
+                4,
+                5
+              ]
+            },
+            {
+              "houses.seventh_ruler_house": [
+                4,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "aspects.Sun_to_Jupiter.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Jupiter_to_Sun.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Moon_to_Jupiter.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Jupiter_to_Moon.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Sun_to_Mars.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Mars_to_Sun.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Moon_to_Mars.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Mars_to_Moon.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Sun_to_Saturn.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Saturn_to_Sun.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Moon_to_Saturn.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Saturn_to_Moon.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "all": [
+                {
+                  "houses.fourth_ruler_hard_afflicted": true
+                },
+                {
+                  "houses.first_ruler_in_8_or_12": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Dense 5th/10th-house concentration under hard luminary or parental-ruler pressure is a grounded family-homicide signature in parental or filial cases, but a public/10th signature alone should not become a family label.",
+    "evidence": [
+      "houses.counts",
+      "houses.first_ruler_house",
+      "houses.fifth_ruler_house",
+      "houses.seventh_ruler_house",
+      "houses.tenth_ruler_house",
+      "aspects.Sun_to_Jupiter",
+      "aspects.Moon_to_Jupiter",
+      "aspects.Sun_to_Mars",
+      "aspects.Moon_to_Mars",
+      "aspects.Sun_to_Saturn",
+      "aspects.Moon_to_Saturn"
+    ]
+  },
+  {
+    "id": "family_parricide_homicide_cluster",
+    "title": "Family homicide cluster is active",
+    "category": "Family",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "houses.eighth_ruler_in_4_8_12": true
+        },
+        {
+          "houses.fifth_ruler_in_4_8_12": true
+        },
+        {
+          "houses.fourth_ruler_angular": true
+        },
+        {
+          "houses.first_and_seventh_rulers_same_house": true
+        },
+        {
+          "any": [
+            {
+              "aspects.Moon_to_Sun.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Sun_to_Moon.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Moon_to_Mercury.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Mercury_to_Moon.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "aspects.Mars_to_Venus.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Venus_to_Mars.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Mars_to_Jupiter.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Jupiter_to_Mars.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Venus_to_Jupiter.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Jupiter_to_Venus.type": [
+                "conjunction",
+                "square",
+                "opposition"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "When the parental 4th/10th axis is activated, the 8th ruler falls into family houses, child significators are pulled into the same family cluster, and the victim-perpetrator planets are in direct contact, the chart points toward family homicide or parricide rather than an outside witness narrative.",
+    "evidence": [
+      "houses.eighth_ruler_house",
+      "houses.fifth_ruler_house",
+      "houses.fourth_ruler_house",
+      "houses.first_ruler_house",
+      "houses.seventh_ruler_house",
+      "aspects.Moon_to_Sun",
+      "aspects.Moon_to_Mercury",
+      "aspects.Mars_to_Venus",
+      "aspects.Mars_to_Jupiter",
+      "aspects.Venus_to_Jupiter"
+    ]
+  },
+  {
+    "id": "public_axis_saturated",
+    "title": "Public crowd-event axis is strongly corroborated",
+    "category": "Public",
+    "weight": 2,
+    "condition": {
+      "all": [
+        {
+          "houses.counts.5>=": 1
+        },
+        {
+          "houses.counts.10>=": 2
+        },
+        {
+          "houses.counts.11>=": 1
+        },
+      {
+        "any": [
+            {
+              "houses.first_ruler_house": 10
+            },
+            {
+              "houses.third_ruler_house": 10
+            },
+            {
+              "houses.tenth_ruler_house": [
+                5,
+                10
+              ]
+          }
+        ]
+      },
+      {
+        "any": [
+          {
+            "moon.hard_malefic_contact": true
+          },
+          {
+            "houses.malefics_angular_count>=": 1
+          },
+          {
+            "houses.malefics_in_8th>=": 1
+          }
+        ]
+      }
+    ]
+  },
+    "rationale": "A public-crowd classification requires separate entertainment, group-network, public-authority, public-ruler, and crisis-pressure channels rather than 10th-house emphasis or crowd symbolism alone.",
+    "evidence": [
+      "houses.counts",
+      "houses.first_ruler_house",
+      "houses.third_ruler_house",
+      "houses.tenth_ruler_house",
+      "planets.Sun",
+      "moon",
+      "houses.malefics_angular_count",
+      "houses.malefics_in_8th"
+    ]
+  },
+  {
+    "id": "vehicle_crash_or_transport_harm_pattern",
+    "title": "Vehicle crash or transport harm pattern is active",
+    "category": "Disaster",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "houses.sixth_ruler_house": 9
+        },
+        {
+          "houses.ninth_ruler_house": 6
+        },
+        {
+          "any": [
+            {
+              "houses.first_ruler_house": [
+                3,
+                6,
+                9
+              ]
+            },
+            {
+              "moon.in_3_or_9": true
+            },
+            {
+              "houses.counts.10>=": 2
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "all": [
+                {
+                  "aspects.Mercury_to_Mars.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Mercury_to_Mars.orb<=": 6
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Mars_to_Mercury.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Mars_to_Mercury.orb<=": 6
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Mercury_to_Saturn.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Mercury_to_Saturn.orb<=": 6
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "aspects.Saturn_to_Mercury.type": [
+                    "conjunction",
+                    "square",
+                    "opposition"
+                  ]
+                },
+                {
+                  "aspects.Saturn_to_Mercury.orb<=": 6
+                }
+              ]
+            },
+            {
+              "houses.malefics_in_8th>=": 1
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.malefics_angular_count>=": 1
+            },
+            {
+              "planets.Mars.angular": true
+            },
+            {
+              "planets.Saturn.angular": true
+            },
+            {
+              "houses.first_ruler_in_8_or_12": true
+            },
+            {
+              "houses.seventh_ruler_in_8_or_12": true
+            }
+          ]
+        },
+        {
+          "not": {
+            "houses.first_ruler_rules_8th": true
+          }
+        }
+      ]
+    },
+    "rationale": "A transport-harm classification requires a reciprocal 6th/9th route-body link, a separate hard mechanical or malefic channel, and victim, Moon, or public-event corroboration.",
+    "evidence": [
+      "houses.sixth_ruler",
+      "houses.sixth_ruler_house",
+      "houses.ninth_ruler",
+      "houses.ninth_ruler_house",
+      "houses.first_ruler_house",
+      "houses.counts",
+      "moon",
+      "aspects.Mercury_to_Mars",
+      "aspects.Mercury_to_Saturn",
+      "planets.Mars",
+      "planets.Saturn",
+      "houses.malefics_in_8th",
+      "houses.malefics_angular_count"
+    ]
+  },
+  {
+    "id": "travel_accident_or_disaster_pattern",
+    "title": "Travel stress context is active",
+    "category": "Context",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "any": [
+            {
+              "houses.first_ruler_house": 9
+            },
+            {
+              "houses.seventh_ruler_house": 9
+            },
+            {
+              "houses.third_ruler_house": 9
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.water_cusp_4_8_12>=": 1
+            },
+            {
+              "houses.neptune_in_4_8_12": true
+            },
+            {
+              "moon.water_sign": true
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "houses.malefics_angular_count>=": 1
+            }
+          ]
+        },
+        {
+          "not": {
+            "any": [
+              {
+                "houses.first_ruler_rules_8th": true
+              },
+              {
+                "houses.first_ruler_in_8_or_12": true
+              },
+              {
+                "houses.fifth_ruler_in_8_or_12": true
+              },
+              {
+                "houses.fourth_ruler_in_4_8_12": true
+              },
+              {
+                "planets.Moon.house": [
+                  4,
+                  8
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "houses.seventh_and_tenth_same_ruler": true
+                  },
+                  {
+                    "any": [
+                      {
+                        "planets.Mercury.retrograde": true
+                      },
+                      {
+                        "solar.combustion": [
+                          "Mercury"
+                        ]
+                      },
+                      {
+                        "solar.under_beams": [
+                          "Mercury"
+                        ]
+                      },
+                      {
+                        "houses.mute_signs_on_angles": true
+                      }
+                    ]
+                  },
+                  {
+                    "any": [
+                      {
+                        "houses.third_ruler_house": [
+                          3,
+                          9
+                        ]
+                      },
+                      {
+                        "houses.ninth_ruler_house": [
+                          3,
+                          9
+                        ]
+                      },
+                      {
+                        "moon.in_3_or_9": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "any": [
+                      {
+                        "houses.seventh_ruler_house": 5
+                      },
+                      {
+                        "houses.eleventh_ruler_house": 5
+                      }
+                    ]
+                  },
+                  {
+                    "any": [
+                      {
+                        "houses.fifth_ruler_in_8_or_12": true
+                      },
+                      {
+                        "houses.emphasis12_count>=": 1
+                      },
+                      {
+                        "planets.Sun.house": 12
+                      },
+                      {
+                        "planets.Moon.house": 12
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "houses.seventh_and_eleventh_same_ruler": true
+                  },
+                  {
+                    "any": [
+                      {
+                        "houses.first_and_fifth_rulers_same_house": true
+                      },
+                      {
+                        "houses.counts.5>=": 2
+                      },
+                      {
+                        "houses.fifth_ruler_house": [
+                          5,
+                          7,
+                          11
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "any": [
+                      {
+                        "planets.Sun.house": 12
+                      },
+                      {
+                        "planets.Moon.house": 12
+                      },
+                      {
+                        "houses.emphasis12_count>=": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "rationale": "Travel houses under water or ending pressure remain contextual. They cannot create an accident or disaster axis unless a separate mechanism-specific rule, such as the reciprocal 6th/9th transport pattern, is satisfied.",
+    "evidence": [
+      "houses.first_ruler_house",
+      "houses.seventh_ruler_house",
+      "houses.third_ruler_house",
+      "houses.water_cusp_4_8_12",
+      "houses.neptune_in_4_8_12",
+      "moon",
+      "houses.malefics_angular_count"
+    ]
+  },
+  {
+    "id": "waterborne_accident_or_disaster_pattern",
+    "title": "Waterborne accident or disaster signatures are foregrounded",
+    "category": "Disaster",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "houses.water_cusp_4_8_12>=": 2
+        },
+      {
+        "any": [
+          {
+            "houses.third_ruler_house": [
+              3,
+              7,
+              9
+            ]
+          },
+          {
+            "houses.ninth_ruler_house": [
+              3,
+              9
+            ]
+          },
+          {
+            "moon.in_3_or_9": true
+          }
+        ]
+      },
+      {
+        "any": [
+          {
+            "houses.tenth_ruler_angular": true
+          },
+          {
+            "houses.counts.10>=": 2
+          }
+        ]
+      },
+      {
+        "any": [
+          {
+            "moon.water_sign": true
+          },
+          {
+            "houses.water_planets_in_4_8_12>=": 2
+          }
+        ]
+      },
+      {
+        "any": [
+          {
+            "moon.hard_malefic_contact": true
+          },
+          {
+            "houses.malefics_angular_count>=": 1
+          },
+          {
+            "houses.malefics_in_8th>=": 1
+          }
+        ]
+        },
+        {
+          "not": {
+            "any": [
+              {
+                "houses.first_ruler_rules_8th": true
+              },
+              {
+                "houses.first_ruler_in_8_or_12": true
+              },
+              {
+                "houses.fifth_ruler_in_8_or_12": true
+              },
+              {
+                "planets.Moon.house": [
+                  4,
+                  8
+                ]
+              },
+              {
+                "houses.fourth_ruler_in_4_8_12": true
+              },
+              {
+                "houses.fourth_ruler_hard_afflicted": true
+              },
+              {
+                "all": [
+                  {
+                    "houses.seventh_and_tenth_same_ruler": true
+                  },
+                  {
+                    "any": [
+                      {
+                        "planets.Mercury.retrograde": true
+                      },
+                      {
+                        "solar.combustion": [
+                          "Mercury"
+                        ]
+                      },
+                      {
+                        "solar.under_beams": [
+                          "Mercury"
+                        ]
+                      },
+                      {
+                        "houses.mute_signs_on_angles": true
+                      }
+                    ]
+                  },
+                  {
+                    "any": [
+                      {
+                        "houses.third_ruler_house": [
+                          3,
+                          9
+                        ]
+                      },
+                      {
+                        "houses.ninth_ruler_house": [
+                          3,
+                          9
+                        ]
+                      },
+                      {
+                        "moon.in_3_or_9": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "any": [
+                      {
+                        "houses.seventh_ruler_house": 5
+                      },
+                      {
+                        "houses.eleventh_ruler_house": 5
+                      }
+                    ]
+                  },
+                  {
+                    "any": [
+                      {
+                        "houses.fifth_ruler_in_8_or_12": true
+                      },
+                      {
+                        "houses.emphasis12_count>=": 1
+                      },
+                      {
+                        "planets.Sun.house": 12
+                      },
+                      {
+                        "planets.Moon.house": 12
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "all": [
+                  {
+                    "houses.seventh_and_eleventh_same_ruler": true
+                  },
+                  {
+                    "any": [
+                      {
+                        "houses.first_and_fifth_rulers_same_house": true
+                      },
+                      {
+                        "houses.counts.5>=": 2
+                      },
+                      {
+                        "houses.fifth_ruler_house": [
+                          5,
+                          7,
+                          11
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "any": [
+                      {
+                        "planets.Sun.house": 12
+                      },
+                      {
+                        "planets.Moon.house": 12
+                      },
+                      {
+                        "houses.emphasis12_count>=": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "rationale": "Waterborne disaster promotion requires five distinct corroborating channels: water environment, movement or route, public-event or vessel prominence, independent lunar or water-body testimony, and crisis pressure. Neptune's generational sign placement is not a channel.",
+    "evidence": [
+      "houses.water_cusp_4_8_12",
+      "houses.third_ruler_house",
+      "houses.ninth_ruler_house",
+      "houses.tenth_ruler_angular",
+      "houses.counts",
+      "houses.water_planets_in_4_8_12",
+      "moon",
+      "houses.malefics_angular_count",
+      "houses.malefics_in_8th"
+    ]
+  },
+  {
+    "id": "air_disaster_launch_pattern",
+    "title": "Air-disaster launch pattern is active",
+    "category": "Context",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "houses.angles_signs.C1": [
+            "Aquarius"
+          ]
+        },
+        {
+          "solar.combustion": [
+            "Mercury"
+          ]
+        },
+        {
+          "houses.eleventh_ruler_in_8_or_12": true
+        },
+        {
+          "any": [
+            {
+              "houses.third_ruler_house": [
+                5,
+                7,
+                9
+              ]
+            },
+            {
+              "houses.tenth_ruler_house": [
+                5,
+                7,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.north_node_in_8th": true
+            },
+            {
+              "houses.mute_signs_on_angles": true
+            }
+          ]
+        },
+        {
+          "not": {
+            "any": [
+              {
+                "houses.first_ruler_rules_8th": true
+              },
+              {
+                "houses.first_ruler_in_8_or_12": true
+              },
+              {
+                "houses.fifth_ruler_in_8_or_12": true
+              },
+              {
+                "houses.fourth_ruler_in_4_8_12": true
+              },
+              {
+                "planets.Moon.house": [
+                  4,
+                  8
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "rationale": "An Aquarian launch axis with a combust travel significator and the 11th-house/public traveler ruler hidden in the 12th points toward an aviation disaster or catastrophic flight failure rather than a domestic case.",
+    "evidence": [
+      "houses.angles_signs",
+      "solar.combustion",
+      "houses.eleventh_ruler_house",
+      "houses.third_ruler_house",
+      "houses.tenth_ruler_house",
+      "houses.north_node_in_8th",
+      "houses.mute_signs_on_angles"
+    ]
+  },
+  {
+    "id": "structural_catastrophe_pattern",
+    "title": "Structural catastrophe pattern is active",
+    "category": "Context",
+    "weight": 4,
+    "condition": {
+      "all": [
+        {
+          "houses.angles_signs.C7": [
+            "Capricorn"
+          ]
+        },
+        {
+          "houses.counts.7>=": 3
+        },
+        {
+          "solar.cazimi": [
+            "Venus"
+          ]
+        },
+        {
+          "planets.Mercury.retrograde": true
+        },
+        {
+          "any": [
+            {
+              "moon.hard_malefic_contact": true
+            },
+            {
+              "aspects.Moon_to_Saturn.type": [
+                "square",
+                "opposition"
+              ]
+            },
+            {
+              "aspects.Saturn_to_Moon.type": [
+                "square",
+                "opposition"
+              ]
+            }
+          ]
+        },
+        {
+          "any": [
+            {
+              "houses.seventh_ruler_in_3_4_12": true
+            },
+            {
+              "houses.eighth_ruler_house": [
+                3,
+                7,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "not": {
+            "any": [
+              {
+                "houses.first_ruler_rules_8th": true
+              },
+              {
+                "houses.first_ruler_in_8_or_12": true
+              },
+              {
+                "houses.fifth_ruler_in_8_or_12": true
+              },
+              {
+                "houses.counts.5>=": 2
+              },
+              {
+                "houses.fourth_ruler_in_4_8_12": true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "rationale": "A Capricorn-saturated crisis axis with Venus cazimi, retrograde Mercury, and the Moon under hard pressure is a grounded large-scale structural or earth-disaster signature rather than an interpersonal crime pattern.",
+    "evidence": [
+      "houses.angles_signs",
+      "houses.counts",
+      "solar.cazimi",
+      "planets.Mercury",
+      "moon",
+      "houses.seventh_ruler_house",
+      "houses.eighth_ruler_house"
+    ]
+  }
+]

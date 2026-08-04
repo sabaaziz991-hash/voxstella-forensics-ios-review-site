@@ -1,0 +1,682 @@
+[
+  {
+    "id": "mercury_neptune_aspect",
+    "title": "Mercury–Neptune deceptive aspect",
+    "category": "Deception",
+    "weight": 3,
+    "condition": {
+      "all": [
+        {
+          "aspects.Mercury_to_Neptune.type": [
+            "conjunction",
+            "square",
+            "opposition"
+          ]
+        },
+        {
+          "aspects.Mercury_to_Neptune.orb<=": 4
+        },
+        {
+          "any": [
+            {
+              "planets.Mercury.angular": true
+            },
+            {
+              "houses.neptune_angular": true
+            },
+            {
+              "houses.neptune_in_4_8_12": true
+            },
+            {
+              "houses.first_ruler": "Mercury"
+            },
+            {
+              "houses.seventh_ruler": "Mercury"
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Mercury–Neptune contacts indicate confusion, lies, deliberate deception, or cover-ups.",
+    "evidence": [
+      "aspects.Mercury_to_Neptune",
+      "aspects.Neptune_to_Mercury"
+    ]
+  },
+  {
+    "id": "mercury_retrograde",
+    "title": "Mercury retrograde",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "planets.Mercury.retrograde": true
+    },
+    "rationale": "Withholding information, misstatements, and evidence problems are more likely.",
+    "evidence": [
+      "planets.Mercury"
+    ]
+  },
+  {
+    "id": "mercury_combust",
+    "title": "Mercury combust the Sun",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "solar.combustion": [
+        "Mercury"
+      ]
+    },
+    "rationale": "Impaired judgment and hidden facts; communications are obscured by the Sun’s beams.",
+    "evidence": [
+      "solar.combustion"
+    ]
+  },
+  {
+    "id": "mercury_combust_applying",
+    "title": "Mercury combust (applying)",
+    "category": "Context",
+    "weight": 3,
+    "condition": {
+      "solar_phase.combustion_applying": [
+        "Mercury"
+      ]
+    },
+    "rationale": "Applying combustion heightens concealment and impairs clarity more than separating.",
+    "evidence": [
+      "solar_phase.combustion_applying"
+    ]
+  },
+  {
+    "id": "mercury_in_12th",
+    "title": "Mercury in the 12th house",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "planets.Mercury.house": 12
+    },
+    "rationale": "Secrets and lies told behind the scenes; private channels of information.",
+    "evidence": [
+      "planets.Mercury"
+    ]
+  },
+  {
+    "id": "mercury_in_mute_sign",
+    "title": "Mercury in a mute sign",
+    "category": "Context",
+    "weight": 1,
+    "condition": {
+      "planets.Mercury.mute_sign": true
+    },
+    "rationale": "Silence or refusal to speak plainly (Cancer, Scorpio, Pisces).",
+    "evidence": [
+      "planets.Mercury"
+    ]
+  },
+  {
+    "id": "neptune_personal_planets",
+    "title": "Neptune to personal planets",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "any": [
+        {
+          "aspects.Neptune_to_Sun.type": [
+            "conjunction",
+            "square",
+            "opposition",
+            "trine",
+            "sextile"
+          ]
+        },
+        {
+          "aspects.Neptune_to_Moon.type": [
+            "conjunction",
+            "square",
+            "opposition",
+            "trine",
+            "sextile"
+          ]
+        },
+        {
+          "aspects.Neptune_to_Mercury.type": [
+            "conjunction",
+            "square",
+            "opposition",
+            "trine",
+            "sextile"
+          ]
+        },
+        {
+          "aspects.Neptune_to_Venus.type": [
+            "conjunction",
+            "square",
+            "opposition",
+            "trine",
+            "sextile"
+          ]
+        },
+        {
+          "aspects.Neptune_to_Mars.type": [
+            "conjunction",
+            "square",
+            "opposition",
+            "trine",
+            "sextile"
+          ]
+        }
+      ]
+    },
+    "rationale": "Illusion, fantasy, and deliberate confusion involving key players.",
+    "evidence": [
+      "aspects.Neptune_to_Sun",
+      "aspects.Neptune_to_Moon",
+      "aspects.Neptune_to_Mercury",
+      "aspects.Neptune_to_Venus",
+      "aspects.Neptune_to_Mars"
+    ]
+  },
+  {
+    "id": "neptune_in_7th_or_12th",
+    "title": "Neptune in 7th or 12th house",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "any": [
+        {
+          "planets.Neptune.house": 7
+        },
+        {
+          "planets.Neptune.house": 12
+        }
+      ]
+    },
+    "rationale": "Deception by partners/open enemies (7th) or hidden/secret enemies (12th).",
+    "evidence": [
+      "planets.Neptune"
+    ]
+  },
+  {
+    "id": "neptune_angular_strong",
+    "title": "Strong Neptune signature",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "houses.neptune_angular": true
+    },
+    "rationale": "Major deception covering the entire situation; staged or disguised events.",
+    "evidence": [
+      "houses.neptune_angular"
+    ]
+  },
+  {
+    "id": "mars_neptune_opposition",
+    "title": "Mars–Neptune opposition",
+    "category": "Deception",
+    "weight": 2,
+    "condition": {
+      "all": [
+        {
+          "aspects.Mars_to_Neptune.type": "opposition"
+        },
+        {
+          "aspects.Mars_to_Neptune.orb<=": 4
+        },
+        {
+          "any": [
+            {
+              "planets.Mars.angular": true
+            },
+            {
+              "houses.neptune_angular": true
+            },
+            {
+              "houses.first_ruler": "Mars"
+            },
+            {
+              "houses.seventh_ruler": "Mars"
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Often seen in abductions/kidnappings; deception about what happened.",
+    "evidence": [
+      "aspects.Mars_to_Neptune",
+      "aspects.Neptune_to_Mars"
+    ]
+  },
+  {
+    "id": "mars_neptune_square",
+    "title": "Mars–Neptune square",
+    "category": "Deception",
+    "weight": 2,
+    "condition": {
+      "all": [
+        {
+          "aspects.Mars_to_Neptune.type": "square"
+        },
+        {
+          "aspects.Mars_to_Neptune.orb<=": 4
+        },
+        {
+          "any": [
+            {
+              "planets.Mars.angular": true
+            },
+            {
+              "houses.neptune_angular": true
+            },
+            {
+              "houses.first_ruler": "Mars"
+            },
+            {
+              "houses.seventh_ruler": "Mars"
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Violence combined with deception; cover-ups; evidence goes missing.",
+    "evidence": [
+      "aspects.Mars_to_Neptune",
+      "aspects.Neptune_to_Mars"
+    ]
+  },
+  {
+    "id": "venus_saturn_hard",
+    "title": "Venus–Saturn hard aspects",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "any": [
+        {
+          "aspects.Venus_to_Saturn.type": [
+            "square",
+            "opposition"
+          ]
+        },
+        {
+          "aspects.Saturn_to_Venus.type": [
+            "square",
+            "opposition"
+          ]
+        }
+      ]
+    },
+    "rationale": "Deception in relationships; abuse disguised as love.",
+    "evidence": [
+      "aspects.Venus_to_Saturn",
+      "aspects.Saturn_to_Venus"
+    ]
+  },
+  {
+    "id": "venus_detriment_with_saturn",
+    "title": "Venus in detriment with Saturn influence",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "any": [
+        {
+          "all": [
+            {
+              "planets.Venus.sign": [
+                "Aries",
+                "Scorpio"
+              ]
+            },
+            {
+              "aspects.Venus_to_Saturn.type": [
+                "conjunction",
+                "square",
+                "opposition",
+                "trine",
+                "sextile"
+              ]
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "planets.Venus.sign": [
+                "Aries",
+                "Scorpio"
+              ]
+            },
+            {
+              "planets.Saturn.angular": true
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Using beauty/charm for deceptive purposes; relational harm.",
+    "evidence": [
+      "planets.Venus",
+      "aspects.Venus_to_Saturn"
+    ]
+  },
+  {
+    "id": "twelfth_house_emphasis_deception",
+    "title": "12th house emphasis",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "houses.emphasis12_strong": true
+    },
+    "rationale": "Hidden enemies, secret motives, cover-ups, self-undoing.",
+    "evidence": [
+      "houses.emphasis12_count"
+    ]
+  },
+  {
+    "id": "seventh_ruler_in_12th",
+    "title": "7th ruler in 12th house",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "houses.seventh_ruler_in_12th": true
+    },
+    "rationale": "Partner/open enemy involved in secrecy or deception.",
+    "evidence": [
+      "houses.seventh_ruler",
+      "houses.seventh_ruler_house"
+    ]
+  },
+  {
+    "id": "sun_or_moon_in_12th",
+    "title": "Sun/Moon in 12th house",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "any": [
+        {
+          "planets.Sun.house": 12
+        },
+        {
+          "planets.Moon.house": 12
+        }
+      ]
+    },
+    "rationale": "Identity hidden or secret activities surrounding the key actors.",
+    "evidence": [
+      "planets.Sun",
+      "planets.Moon"
+    ]
+  },
+  {
+    "id": "mute_signs_on_angles",
+    "title": "Mute signs on angles",
+    "category": "Context",
+    "weight": 1,
+    "condition": {
+      "houses.mute_signs_on_angles": true
+    },
+    "rationale": "Refusal to reveal truth; secrecy surrounding the axis.",
+    "evidence": [
+      "houses.angles_signs"
+    ]
+  },
+  {
+    "id": "mute_signs_on_3rd_or_9th",
+    "title": "Mute signs on 3rd/9th",
+    "category": "Context",
+    "weight": 1,
+    "condition": {
+      "houses.mute_sign_on_3rd_or_9th": true
+    },
+    "rationale": "Deception in communications or legal matters.",
+    "evidence": [
+      "houses.angles_signs"
+    ]
+  },
+  {
+    "id": "north_node_in_8th",
+    "title": "North Node in the 8th house",
+    "category": "Context",
+    "weight": 1,
+    "condition": {
+      "houses.north_node_in_8th": true
+    },
+    "rationale": "Foreign/ruse/lie schemes; insurance/other-people's-money ruses.",
+    "evidence": [
+      "houses.north_node_house"
+    ]
+  },
+  {
+    "id": "saturn_neptune_coverup",
+    "title": "Saturn–Neptune cover-up (authority/institution)",
+    "category": "Deception",
+    "weight": 2,
+    "condition": {
+      "all": [
+        {
+          "aspects.Saturn_to_Neptune.type": [
+            "conjunction",
+            "square",
+            "opposition"
+          ]
+        },
+        {
+          "aspects.Saturn_to_Neptune.orb<=": 4
+        },
+        {
+          "any": [
+            {
+              "planets.Saturn.angular": true
+            },
+            {
+              "houses.neptune_angular": true
+            },
+            {
+              "houses.first_ruler": "Saturn"
+            },
+            {
+              "houses.seventh_ruler": "Saturn"
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Institutions/authorities (Saturn) entangled with obfuscation/deception (Neptune).",
+    "evidence": [
+      "aspects.Saturn_to_Neptune",
+      "aspects.Neptune_to_Saturn"
+    ]
+  },
+  {
+    "id": "node_with_neptune_or_mercury",
+    "title": "Node with Neptune/Mercury (karmic ruse/lie scheme)",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "any": [
+        {
+          "aspects.North Node_to_Neptune.type": [
+            "conjunction",
+            "square",
+            "opposition",
+            "trine",
+            "sextile"
+          ]
+        },
+        {
+          "aspects.Neptune_to_North Node.type": [
+            "conjunction",
+            "square",
+            "opposition",
+            "trine",
+            "sextile"
+          ]
+        },
+        {
+          "aspects.Node_to_Neptune.type": [
+            "conjunction",
+            "square",
+            "opposition",
+            "trine",
+            "sextile"
+          ]
+        },
+        {
+          "aspects.Neptune_to_Node.type": [
+            "conjunction",
+            "square",
+            "opposition",
+            "trine",
+            "sextile"
+          ]
+        },
+        {
+          "all": [
+            {
+              "aspects.North Node_to_Mercury.type": [
+                "conjunction",
+                "square",
+                "opposition",
+                "trine",
+                "sextile"
+              ]
+            },
+            {
+              "not": {
+                "houses.mercury_public_node_soft_hidden": true
+              }
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "aspects.Mercury_to_North Node.type": [
+                "conjunction",
+                "square",
+                "opposition",
+                "trine",
+                "sextile"
+              ]
+            },
+            {
+              "not": {
+                "houses.mercury_public_node_soft_hidden": true
+              }
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "aspects.Node_to_Mercury.type": [
+                "conjunction",
+                "square",
+                "opposition",
+                "trine",
+                "sextile"
+              ]
+            },
+            {
+              "not": {
+                "houses.mercury_public_node_soft_hidden": true
+              }
+            }
+          ]
+        },
+        {
+          "all": [
+            {
+              "aspects.Mercury_to_Node.type": [
+                "conjunction",
+                "square",
+                "opposition",
+                "trine",
+                "sextile"
+              ]
+            },
+            {
+              "not": {
+                "houses.mercury_public_node_soft_hidden": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Node + Neptune/Mercury signals planned deception, ruse, or lie schemes.",
+    "evidence": [
+      "aspects"
+    ]
+  },
+  {
+    "id": "neptune_water_saturn_soft_coverup",
+    "title": "Angular Neptune water cover-up pressure",
+    "category": "Context",
+    "weight": 1,
+    "condition": {
+      "all": [
+        {
+          "houses.neptune_angular": true
+        },
+        {
+          "houses.water_cusp_4_8_12>=": 2
+        },
+        {
+          "any": [
+            {
+              "aspects.Saturn_to_Neptune.type": "sextile"
+            },
+            {
+              "aspects.Neptune_to_Saturn.type": "sextile"
+            }
+          ]
+        }
+      ]
+    },
+    "rationale": "Angular Neptune with water-house pressure and a Saturn link adds institutional concealment testimony without turning soft Saturn-Neptune contacts into a general cover-up rule.",
+    "evidence": [
+      "houses.neptune_angular",
+      "houses.water_cusp_4_8_12",
+      "aspects.Saturn_to_Neptune",
+      "aspects.Neptune_to_Saturn"
+    ]
+  },
+  {
+    "id": "north_node_in_4th",
+    "title": "North Node in the 4th house (staged-location deception)",
+    "category": "Context",
+    "weight": 2,
+    "condition": {
+      "houses.north_node_house": 4
+    },
+    "rationale": "Staged scenes, property/location ruses, or concealed environments.",
+    "evidence": [
+      "houses.north_node_house"
+    ]
+  },
+  {
+    "id": "truth_jupiter_mercury_easy",
+    "title": "Jupiter–Mercury easy aspect (clarity)",
+    "category": "Truth",
+    "weight": 2,
+    "condition": {
+      "any": [
+        {
+          "aspects.Jupiter_to_Mercury.type": [
+            "trine",
+            "sextile"
+          ]
+        },
+        {
+          "aspects.Mercury_to_Jupiter.type": [
+            "trine",
+            "sextile"
+          ]
+        }
+      ]
+    },
+    "rationale": "Clear communications, lawful/ethical framing supports truthfulness.",
+    "evidence": [
+      "aspects.Jupiter_to_Mercury",
+      "aspects.Mercury_to_Jupiter"
+    ]
+  }
+]

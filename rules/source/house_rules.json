@@ -1,0 +1,56 @@
+[
+  {
+    "id": "first_ruler_in_8th",
+    "title": "1st ruler in the 8th house",
+    "category": "Houses",
+    "weight": 4,
+    "condition": {
+      "houses.first_ruler_house": 8
+    },
+    "rationale": "Victim (1st ruler) located in house of death/resources suggests grave danger.",
+    "evidence": [
+      "houses.first_ruler",
+      "houses.first_ruler_house"
+    ]
+  },
+  {
+    "id": "first_ruler_rules_8th",
+    "title": "1st ruler also rules the 8th",
+    "category": "Houses",
+    "weight": 4,
+    "condition": {
+      "houses.first_ruler_rules_8th": true
+    },
+    "rationale": "Overlap of life (1st) and death (8th) rulers amplifies mortality themes.",
+    "evidence": [
+      "houses.first_ruler",
+      "houses.eighth_ruler"
+    ]
+  },
+  {
+    "id": "strong_12th_emphasis",
+    "title": "Strong 12th house emphasis",
+    "category": "Houses",
+    "weight": 3,
+    "condition": {
+      "houses.emphasis12_strong": true
+    },
+    "rationale": "Hidden enemies, cover-ups, confinement, or self-undoing are prominent.",
+    "evidence": [
+      "houses.emphasis12_count"
+    ]
+  },
+  {
+    "id": "malefics_in_6th",
+    "title": "Malefic in the 6th house",
+    "category": "Houses",
+    "weight": 3,
+    "condition": {
+      "houses.malefics_in_6th>=": 1
+    },
+    "rationale": "Accidents, violence, or bodily harm indicated via Mars/Saturn in 6th.",
+    "evidence": [
+      "houses.malefics_in_6th"
+    ]
+  }
+]

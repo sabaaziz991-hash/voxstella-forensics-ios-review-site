@@ -1,0 +1,81 @@
+name: Publish rule corpus
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - rules/source/*.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-rule-corpus
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate and assemble corpus
+        shell: bash
+        run: |
+          set -euo pipefail
+          files=(
+            rules/source/base.json
+            rules/source/deception_rules.json
+            rules/source/degree_signatures.json
+            rules/source/directional_context_rules.json
+            rules/source/house_rules.json
+          )
+          for file in "${files[@]}"; do
+            jq -e 'type == "array" and length > 0' "$file" >/dev/null
+          done
+
+          revision="$(date -u +%Y%m%d%H%M%S)"
+          package="rules/packages/${revision}.json"
+          jq -S -s 'add' "${files[@]}" > "$package"
+          jq -e '
+            length > 0 and
+            all(.[];
+              (.id | type == "string" and length > 0) and
+              (.title | type == "string" and length > 0) and
+              (.category | type == "string" and length > 0) and
+              (.weight | type == "number") and
+              (.rationale | type == "string" and length > 0) and
+              has("condition")
+            ) and
+            ([.[].id] | length == (unique | length))
+          ' "$package" >/dev/null
+
+          sha256="$(shasum -a 256 "$package" | awk '{print $1}')"
+          published_at="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          jq -n \
+            --argjson revision "$revision" \
+            --arg publishedAt "$published_at" \
+            --arg rulesPath "packages/${revision}.json" \
+            --arg sha256 "$sha256" \
+            '{
+              schemaVersion: 1,
+              engineVersion: 1,
+              revision: $revision,
+              publishedAt: $publishedAt,
+              rulesPath: $rulesPath,
+              sha256: $sha256
+            }' > rules/manifest.json
+
+      - name: Commit published package
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rules/manifest.json rules/packages/
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Publish rule corpus [skip ci]"
+          git push

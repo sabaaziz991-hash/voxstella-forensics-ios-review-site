@@ -1,0 +1,147 @@
+[
+  {
+    "id": "any_anaretic_planet",
+    "title": "Anaretic degree (29°) occupied",
+    "category": "Degree Signatures",
+    "weight": 2,
+    "condition": {
+      "planets.Sun.anaretic": true
+    },
+    "rationale": "A planet at the end of a sign (29°) can indicate culmination, urgency, or transition.",
+    "evidence": [
+      "planets.Sun"
+    ]
+  },
+  {
+    "id": "any_anaretic_planet_any",
+    "title": "Any planet anaretic",
+    "category": "Degree Signatures",
+    "weight": 3,
+    "condition": {
+      "any": [
+        {
+          "planets.Moon.anaretic": true
+        },
+        {
+          "planets.Mercury.anaretic": true
+        },
+        {
+          "planets.Venus.anaretic": true
+        },
+        {
+          "planets.Mars.anaretic": true
+        },
+        {
+          "planets.Jupiter.anaretic": true
+        },
+        {
+          "planets.Saturn.anaretic": true
+        }
+      ]
+    },
+    "rationale": "Any classical planet at 29° often marks a late-stage or urgent matter.",
+    "evidence": [
+      "planets.Moon",
+      "planets.Mercury",
+      "planets.Venus",
+      "planets.Mars",
+      "planets.Jupiter",
+      "planets.Saturn"
+    ]
+  },
+  {
+    "id": "moon_via_combusta",
+    "title": "Moon in Via Combusta",
+    "category": "Degree Signatures",
+    "weight": 4,
+    "condition": {
+      "moon.via_combusta": true
+    },
+    "rationale": "Traditional caution when the Moon is between 15° Libra and 15° Scorpio.",
+    "evidence": [
+      "planets.Moon"
+    ]
+  },
+  {
+    "id": "planet_ingress",
+    "title": "Planet at sign ingress (0°–1°)",
+    "category": "Degree Signatures",
+    "weight": 2,
+    "condition": {
+      "any": [
+        {
+          "planets.Sun.ingress": true
+        },
+        {
+          "planets.Moon.ingress": true
+        },
+        {
+          "planets.Mercury.ingress": true
+        },
+        {
+          "planets.Venus.ingress": true
+        },
+        {
+          "planets.Mars.ingress": true
+        },
+        {
+          "planets.Jupiter.ingress": true
+        },
+        {
+          "planets.Saturn.ingress": true
+        }
+      ]
+    },
+    "rationale": "Early degree indicates entry into a new theme or condition.",
+    "evidence": [
+      "planets.Sun",
+      "planets.Moon",
+      "planets.Mercury",
+      "planets.Venus",
+      "planets.Mars",
+      "planets.Jupiter",
+      "planets.Saturn"
+    ]
+  },
+  {
+    "id": "mid_degree_focus",
+    "title": "Mid-degree focus (≈15°)",
+    "category": "Degree Signatures",
+    "weight": 1,
+    "condition": {
+      "any": [
+        {
+          "planets.Sun.middegree": true
+        },
+        {
+          "planets.Moon.middegree": true
+        },
+        {
+          "planets.Mercury.middegree": true
+        },
+        {
+          "planets.Venus.middegree": true
+        },
+        {
+          "planets.Mars.middegree": true
+        },
+        {
+          "planets.Jupiter.middegree": true
+        },
+        {
+          "planets.Saturn.middegree": true
+        }
+      ]
+    },
+    "rationale": "Mid-degree can indicate steadiness or consolidation within a sign.",
+    "evidence": [
+      "planets.Sun",
+      "planets.Moon",
+      "planets.Mercury",
+      "planets.Venus",
+      "planets.Mars",
+      "planets.Jupiter",
+      "planets.Saturn"
+    ]
+  }
+]
