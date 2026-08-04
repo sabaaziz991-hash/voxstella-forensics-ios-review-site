@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "engineVersion": 1,
-  "revision": 20260804123122,
-  "publishedAt": "2026-08-04T12:31:22Z",
-  "rulesPath": "packages/20260804123122.json",
-  "sha256": "a86dfcf1cadc92958139b90be0ce406e256ef18538831b6014b60dff6e57d868"
+  "revision": 20260804140014,
+  "publishedAt": "2026-08-04T14:00:14Z",
+  "rulesPath": "packages/20260804140014.json",
+  "sha256": "0ea0b2665e6e47a3baa6ea0ff13e5c0c5ae33b48b70e78726cda18c28cc232fb"
 }
